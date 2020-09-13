@@ -1,8 +1,13 @@
 @import "_colors";
 
-.main_links>a{
+a{
     color:$white;
     text-decoration:none;
+   
+
+}
+
+.main_links{
     background-color:$blue;
     padding:2rem;
     margin-top:1rem;
