@@ -1,4 +1,4 @@
-.main_links {
+a {
   color: #ffffff;
   text-decoration: none;
   background-color: #00008b;
@@ -12,4 +12,8 @@
 /*sass --watch styles.scss:../css/styles.css*/
 h2 {
   color: #ffa500;
+}
+
+header {
+  background-color: #00008b;
 }
