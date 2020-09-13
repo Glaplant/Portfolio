@@ -1,17 +1,17 @@
+/*Test8*/
+/*run in terminal to auto compile sass*/
+/*cd scss && sass --watch styles.scss:../css/styles.css*/
+header {
+  background-color: #00008b; }
+
 a {
   color: #ffffff;
-  text-decoration: none;
+  text-decoration: none; }
+
+.main_links {
   background-color: #00008b;
   padding: 2rem;
-  margin-top: 2px;
-  margin-bottom: 2px;
-}
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
 
-/*Test4*/
-/*run in terminal to auto compile sass*/
-/*sass --watch styles.scss:../css/styles.css*/
-
-
-header {
-  background-color: #00008b;
-}
+/*# sourceMappingURL=styles.css.map */

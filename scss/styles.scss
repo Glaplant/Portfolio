@@ -1,8 +1,8 @@
-@use "partials/_links";
+
 @import "partials/_colors";
 
 
-/*Test5*/
+/*Test8*/
 /*run in terminal to auto compile sass*/
 /*sass --watch styles.scss:../css/styles.css*/
 
@@ -10,5 +10,21 @@
 
 header{
     background-color: $blue;
+}
+
+
+a{
+    color:$white;
+    text-decoration:none;
+   
+
+}
+
+.main_links{
+    background-color:$blue;
+    padding:2rem;
+    margin-top:1rem;
+    margin-bottom:1rem;
+
 }
 
