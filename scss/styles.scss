@@ -1,0 +1,14 @@
+@use "partials/_links";
+@import "partials/_colors";
+
+
+/*Test4*/
+/*run in terminal to auto compile sass*/
+/*sass --watch styles.scss:../css/styles.css*/
+
+
+
+h2{
+color:$orange;
+}
+
