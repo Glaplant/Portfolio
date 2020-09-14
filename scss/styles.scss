@@ -13,9 +13,7 @@ body{
 }
 
 
-header{
-    background-color: $orange;
-}
+
 
 
 a{
@@ -31,6 +29,10 @@ a{
     margin-top:1rem;
     margin-bottom:1rem;
 
+}
+
+.header_bg{
+    background-color: $orange;
 }
 
 header>h1{
