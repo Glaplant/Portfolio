@@ -21,7 +21,9 @@ a {
   margin-top: 1rem;
   margin-bottom: 1rem; }
 
-h1 {
-  font: 900 3em "Roboto", sans-serif; }
+header > h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 3em; }
 
 /*# sourceMappingURL=styles.css.map */
