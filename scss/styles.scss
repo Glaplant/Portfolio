@@ -1,5 +1,6 @@
 
 @import "partials/_colors";
+@import "partials/_fonts";
 
 
 /*Test8*/
@@ -30,5 +31,9 @@ a{
     margin-top:1rem;
     margin-bottom:1rem;
 
+}
+
+h1{
+    font: 900 3em $roboto;
 }
 

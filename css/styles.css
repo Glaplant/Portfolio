@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 /*Test8*/
 /*run in terminal to auto compile sass*/
 /*sass --watch styles.scss:../css/styles.css*/
@@ -18,5 +20,8 @@ a {
   padding: 2rem;
   margin-top: 1rem;
   margin-bottom: 1rem; }
+
+h1 {
+  font: 900 3em "Roboto", sans-serif; }
 
 /*# sourceMappingURL=styles.css.map */
