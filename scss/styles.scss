@@ -24,15 +24,20 @@ a{
 }
 
 .main_links{
-    background-color:$tan;
+    
     padding:2rem;
     margin-top:1rem;
     margin-bottom:1rem;
 
 }
 
+.main_links:hover{
+    background-color:$dark_green;
+
+}
+
 .header_bg{
-    background-color: $orange;
+    background-color: $red_brown;
 }
 
 header>h1{
@@ -41,3 +46,6 @@ header>h1{
     font-size:3em;
 }
 
+.wk_links{
+    background-color:$light_green;
+}
