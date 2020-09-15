@@ -34,6 +34,10 @@ a {
   text-decoration: none;
 }
 
+ol.padding {
+  padding: 0rem;
+}
+
 .wk_links a {
   font-family: "Nunito", sans-serif;
   font-weight: 600;
@@ -124,6 +128,7 @@ header > h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 900;
   font-size: 3em;
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=styles.css.map */
