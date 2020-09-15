@@ -1,0 +1,16 @@
+@use '_fonts';
+@use '_colors';
+
+
+
+.button_styles{
+   /* border-radius:35px;*/
+    border:none;
+    font-family:fonts.$nunito;
+    font-weight:600 ;
+    color:colors.$white;
+    background-color:colors.$dark_green ;
+    font-size: 1.5rem;
+    padding:1rem;
+    margin-bottom:2rem;
+}

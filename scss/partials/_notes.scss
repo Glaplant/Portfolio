@@ -1,0 +1,28 @@
+@use '_colors';
+@use 'fonts';
+
+
+
+
+
+
+.notes{
+    background-color: colors.$tan;
+    border: solid 2px colors.$red_brown;
+    margin-left:1rem;
+    width:80%;
+   
+    
+
+}
+
+.notes h3{
+    font: 700 2rem fonts.$nunito;
+    color:colors.$dark_green;
+
+}
+
+.notes p{
+    font: 700 1rem fonts.$nunito;
+    color:colors.$dark_green;
+}

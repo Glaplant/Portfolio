@@ -1,2 +1,49 @@
-@import "_colors";
+@use "_colors";
+@use "_fonts";
+
+
+.main_links{
+    
+    padding:2rem;
+    margin-top:1rem;
+    margin-bottom:1rem;
+    max-width:100%;
+    background-color:colors.$light_blue ;
+
+}
+
+a{
+    color:colors.$white;
+    text-decoration:none;
+    
+    
+   }
+
+ 
+
+.wk_links a{
+    font-family:fonts.$nunito;
+    font-weight:600;
+    font-size:1.5em;
+    display:block;
+}
+
+.wk_links{
+    background-color:colors.$light_blue;
+    border-left:solid 30px colors.$dark_green;
+
+}
+
+.wk_links:hover{
+    background-color:colors.$dark_green;
+
+}
+
+.section_links{
+    color:colors.$dark_green;
+    font-weight:300;
+    font-size:2rem;
+    font-family:fonts.$nunito;
+}
+
 

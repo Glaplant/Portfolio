@@ -1,7 +1,1 @@
-{
-"version": 3,
-"mappings": "AACQ,gGAAwF;AACxF,2EAAmE;ACG3E,SAAS;AACT,wCAAwC;AACxC,8CAA8C;AAC9C,IAAI;EACA,KAAK,EAAC,GAAG;EACT,WAAW,EAAE,IAAI;EACjB,YAAY,EAAE,IAAI;;AAOtB,CAAC;EACG,KAAK,EClBD,OAAO;EDmBX,eAAe,EAAC,IAAI;;AAKxB,WAAW;EAEP,OAAO,EAAC,IAAI;EACZ,UAAU,EAAC,IAAI;EACf,aAAa,EAAC,IAAI;;AAItB,eAAe;EACX,gBAAgB,EC9BP,OAAO;;ADkCpB,UAAU;EACN,gBAAgB,ECvCP,OAAO;;AD0CpB,WAAS;EACL,WAAW,EDvCP,oBAAoB;ECwCxB,WAAW,EAAC,GAAG;EACf,SAAS,EAAC,GAAG;;AAGjB,SAAS;EACL,gBAAgB,EC9CP,OAAO;ED+ChB,WAAW,ED7CP,oBAAoB;EC8CxB,WAAW,EAAC,GAAG;EACf,SAAS,EAAC,GAAG",
-"sources": ["../scss/partials/_fonts.scss","../scss/styles.scss","../scss/partials/_colors.scss"],
-"names": [],
-"file": "styles.css"
-}
+{"version":3,"sourceRoot":"","sources":["../scss/partials/_fonts.scss","../scss/partials/_buttons.scss","../scss/partials/_colors.scss","../scss/partials/_links.scss","../scss/partials/_sidebar.scss","../scss/partials/_notes.scss","../scss/partials/_main_flex.scss","../scss/styles.scss"],"names":[],"mappings":"AACQ;AACA;AAGR;AAEA;ACFA;AACG;EACC;EACA;EACA;EACA,OCTI;EDUJ,kBCPS;EDQT;EACA;EACA;;;AEVJ;EAEI;EACA;EACA;EACA;EACA,kBDPS;;;ACWb;EACI,ODdI;ECeJ;;;AAOJ;EACI,aHhBI;EGiBJ;EACA;EACA;;;AAGJ;EACI,kBD5BS;EC6BT;;;AAIJ;EACI,kBDjCS;;;ACqCb;EACI,ODtCS;ECuCT;EACA;EACA,aHrCI;;;AILR;EACI,kBFFE;EEGF;EACA;;;ACEJ;EACI,kBHPE;EGQF;EACA;EACA;;;AAMJ;EACI;EACA,OHhBS;;;AGoBb;EACI;EACA,OHtBS;;;AIJb;EACI;EACA;;;ACMJ;AACA;AACA;AACA;EACI;EACA;EACA;;;AAGJ;EACI,aPVI;EOWJ;EACA;EACA,OLjBS;EKkBT;;;AAGJ;EACI,kBL1BS;;;AK6Bb;EACI,aPxBI;EOyBJ;EACA","file":"styles.css"}

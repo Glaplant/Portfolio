@@ -1,8 +1,11 @@
 
-@import "partials/_colors";
-@import "partials/_fonts";
-
-
+@use "partials/_colors";
+@use "partials/_fonts";
+@use "partials/_buttons";
+@use "partials/_links";
+@use "partials/_sidebar";
+@use "partials/_notes";
+@use "partials/_main_flex";
 /*Test8*/
 /*run in terminal to auto compile sass*/
 /*sass --watch styles.scss:../css/styles.css*/
@@ -12,43 +15,22 @@ body{
     margin-right: auto;
 }
 
-
-
-
-
-a{
-    color:$white;
-    text-decoration:none;
-   
-
-}
-
-.main_links{
-    
-    padding:2rem;
-    margin-top:1rem;
-    margin-bottom:1rem;
-
-}
-
-.wk_links:hover{
-    background-color:$dark_green;
-
+.book_examples{
+    font-family:fonts.$nunito ;
+    font-size:2.5rem;
+    font-weight:900;
+    color:colors.$dark_green;
+    padding-left: 2rem;
 }
 
 .header_bg{
-    background-color: $red_brown;
+    background-color:colors.$red_brown;
 }
 
 header>h1{
-    font-family:$roboto;
+    font-family:fonts.$roboto;
     font-weight:900;
     font-size:3em;
 }
 
-.wk_links{
-    background-color:$light_blue;
-    font-family:$nunito;
-    font-weight:600;
-    font-size:2em;
-}
+

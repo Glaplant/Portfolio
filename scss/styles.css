@@ -60,7 +60,7 @@ a {
   background-color: #c4ac7c;
   border: solid 2px #9e391a;
   margin-left: 1rem;
-  width: 80%;
+  width: 60%;
 }
 
 .notes h3 {
@@ -74,8 +74,13 @@ a {
 }
 
 .flex_parent {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
 /*Test8*/
@@ -104,5 +109,4 @@ header > h1 {
   font-weight: 900;
   font-size: 3em;
 }
-
 /*# sourceMappingURL=styles.css.map */
