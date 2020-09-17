@@ -34,6 +34,10 @@ a {
   text-decoration: none;
 }
 
+ol.padding {
+  padding: 0rem;
+}
+
 .wk_links a {
   font-family: "Nunito", sans-serif;
   font-weight: 600;
@@ -55,6 +59,10 @@ a {
   font-weight: 300;
   font-size: 2rem;
   font-family: "Nunito", sans-serif;
+}
+
+.header_links a:hover {
+  color: #2d433a;
 }
 
 .sidebar {
@@ -104,7 +112,6 @@ section.notes > h2 {
           flex-flow: row;
 }
 
-/*Test8*/
 /*run in terminal to auto compile sass*/
 /*sass --watch styles.scss:../css/styles.css*/
 body {

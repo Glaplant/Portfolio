@@ -1,21 +1,46 @@
 function loadStory(){
-    var storyName = document.getElementById(name_input).value
-    var storyHTML = localStorage.getItem(storyName)
-    document.getElementById(story_editor).value = storyHTML
+    var storyName = document.querySelector("#name_input").value
+    var storyHTML = localStorage.getItem("storyName")
+    document.querySelector("#story_editor").value = storyHTML
     }
 
 function saveStory(){
-    var storyName = document.getElementById(name_input).value
-    var storyHTML = document.getElementById(story_editor).value
+    var storyName = document.querySelector("#name_input").value
+    var storyHTML = document.querySelector("#story_editor").value
     localStorage.setItem(storyName, storyHTML)
     
 }
 
 function displayStory(){
-    var storyHTML = document.getElementById(story_editor).value
-    document.getElementById(story_display).innerHTML = storyHTML
+    var storyName = document.querySelector("#name_input").value
+    var storyHTML = document.querySelector("#story_editor").value
+    var story = document.querySelector("#story_display");
+    document.querySelector("#story_display").innerHTML = storyName + storyHTML
+    
+   
+    
+    
+    if(story.style.display === "none"){
+        story.style.display = "block";
     }
+    else{
+        story.style.display = "none";
+    }
+}
 
 
   
-    
+//     var section = document.querySelector('');
+
+// let arrayLength = weeks.length;
+// for(i=0;i<arrayLength;i++){
+// var li = document.createElement('li');
+// var a = document.createElement('a');
+// var week = i+1;
+// a.textContent = 'Week 0'+ week;
+// ol.appendChild(li);
+// li.appendChild(a);
+// li.style.listStyle= "none";
+// li.classList.add("main_links" , "wk_links");
+// a.href='views/'+ weeks[i] +'.html';
+// }

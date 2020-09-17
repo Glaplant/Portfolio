@@ -61,6 +61,10 @@ ol.padding {
   font-family: "Nunito", sans-serif;
 }
 
+.header_links a:hover {
+  color: #2d433a;
+}
+
 .sidebar {
   background-color: #c4ac7c;
   border: solid 2px #9e391a;
@@ -98,12 +102,17 @@ section.notes > h2 {
   margin-bottom: 0.5rem;
 }
 
+#story_editor {
+  width: 100%;
+  height: 10rem;
+  border: solid 3px #9e391a;
+}
+
 .flex_parent {
   display: flex;
   flex-flow: row;
 }
 
-/*Test8*/
 /*run in terminal to auto compile sass*/
 /*sass --watch styles.scss:../css/styles.css*/
 body {
