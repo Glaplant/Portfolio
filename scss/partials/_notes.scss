@@ -29,12 +29,9 @@
 }
 
 
-section.notes{
-width:100%;
 
-}
 
-section.notes>h2{
+div.notes>h2{
     font: 700 2rem fonts.$nunito;
     color:colors.$dark_green;
     margin-bottom:.5rem;
@@ -44,7 +41,8 @@ section.notes>h2{
 }
 
 #story_editor{
-    width:100%;
+    width:800px;
     height:10rem;
     border: solid 3px colors.$red_brown;
+    margin-bottom: 2rem;
 }

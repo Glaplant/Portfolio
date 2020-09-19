@@ -95,20 +95,17 @@ ol.padding {
   margin-top: 0rem;
 }
 
-section.notes {
-  width: 100%;
-}
-
-section.notes > h2 {
+div.notes > h2 {
   font: 700 2rem "Nunito", sans-serif;
   color: #354536;
   margin-bottom: 0.5rem;
 }
 
 #story_editor {
-  width: 100%;
+  width: 800px;
   height: 10rem;
   border: solid 3px #9e391a;
+  margin-bottom: 2rem;
 }
 
 .flex_parent {
@@ -124,11 +121,26 @@ body {
   margin-right: auto;
 }
 
+main {
+  padding: 0;
+  margin: 0;
+}
+
+main > h2 {
+  font: 700 2rem "Nunito", sans-serif;
+  color: #354536;
+  margin-bottom: 0.5rem;
+}
+
 .book_examples {
   font-family: "Nunito", sans-serif;
   font-size: 2.5rem;
   font-weight: 900;
   color: #354536;
+}
+
+h2.book_examples {
+  margin: 0;
 }
 
 .header_bg {
