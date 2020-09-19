@@ -68,14 +68,18 @@ ol.padding {
 .sidebar {
   background-color: #c4ac7c;
   border: solid 2px #9e391a;
-  width: 25%;
   margin-right: 1rem;
+  padding: 1rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
 }
 
 .notes {
   background-color: #c4ac7c;
   border: solid 2px #9e391a;
-  width: 80%;
   padding: 0rem 2rem;
 }
 
@@ -92,14 +96,19 @@ ol.padding {
 }
 
 section.notes {
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
 }
 
 section.notes > h2 {
   font: 700 2rem "Nunito", sans-serif;
   color: #354536;
   margin-bottom: 0.5rem;
+}
+
+#story_editor {
+  width: 100%;
+  height: 10rem;
+  border: solid 3px #9e391a;
 }
 
 .flex_parent {
@@ -125,7 +134,6 @@ body {
   font-size: 2.5rem;
   font-weight: 900;
   color: #354536;
-  padding-left: 2rem;
 }
 
 .header_bg {

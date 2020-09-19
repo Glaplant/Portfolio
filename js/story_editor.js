@@ -15,10 +15,13 @@ function displayStory(){
     var storyName = document.querySelector("#name_input").value
     var storyHTML = document.querySelector("#story_editor").value
     var story = document.querySelector("#story_display");
-    document.querySelector("#story_display").innerHTML = storyName + storyHTML
-    
-   
-    
+    var h2 = document.createElement('h2');
+    var p = document.createElement('p');
+    story.appendChild(h2);
+    story.appendChild(p);
+    document.querySelector("#story_display>h2").innerHTML = storyName
+    document.querySelector("#story_display>p").innerHTML = storyHTML
+
     
     if(story.style.display === "none"){
         story.style.display = "block";

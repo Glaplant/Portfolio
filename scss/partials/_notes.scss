@@ -9,7 +9,6 @@
 .notes{
     background-color: colors.$tan;
     border: solid 2px colors.$red_brown;
-    width:80%;
     padding:0rem 2rem;
    
     
@@ -31,8 +30,7 @@
 
 
 section.notes{
-margin-left:auto;
-margin-right:auto;
+width:100%;
 
 }
 
@@ -40,6 +38,7 @@ section.notes>h2{
     font: 700 2rem fonts.$nunito;
     color:colors.$dark_green;
     margin-bottom:.5rem;
+    
 
     
 }
