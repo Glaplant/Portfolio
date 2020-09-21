@@ -6,9 +6,13 @@
 @use "partials/_sidebar";
 @use "partials/_notes";
 @use "partials/_main_flex";
+@import "scss/fontawesome.scss";
+@import "scss/solid.scss";
 
 /*run in terminal to auto compile sass*/
 /*sass --watch styles.scss:../css/styles.css*/
+
+
 body{
     width:80%;
     margin-left: auto;
@@ -55,7 +59,11 @@ header>h1{
 }
 
 
+.fas.fa-user-ninja{
+   padding: 0rem 2rem;
 
+
+}
 // #result_display{
 //     display:none;
 // }

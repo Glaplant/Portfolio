@@ -22,7 +22,7 @@
 
 }
 
-.notes p{
+.notes p, .notes li{
     font: 700 1rem fonts.$nunito;
     color:colors.$dark_green;
     margin-top:0rem;
@@ -40,9 +40,15 @@ div.notes>h2{
     
 }
 
+.sizing{
+    max-width:100%;
+
+
+}
+
 #story_editor{
-    width:800px;
-    height:10rem;
+    width:100%;
+    height:auto;
     border: solid 3px colors.$red_brown;
     margin-bottom: 2rem;
 }
