@@ -1,6 +1,9 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Baloo+Da&display=swap");
+/*Portfolio*/
+/*Quiz Colors Ninja*/
 /*h1*/
 /*h2*/
 .button_styles {
@@ -70,7 +73,7 @@ ol.padding {
   background-color: #c4ac7c;
   border: solid 2px #9e391a;
   margin-right: 1rem;
-  padding: 1rem;
+  padding: 1rnodeem;
 }
 
 .sidebar ul {
@@ -6228,5 +6231,67 @@ header > h1 {
 
 .fas.fa-user-ninja, .fas.fa-book-reader {
   padding: 0rem 2rem;
+}
+
+/*quiz ninja*/
+.quizBody {
+  background: #5F1C1C;
+  font-family: "Roboto", sans-serif;
+}
+
+.dojo {
+  background: url(https://cdn.rawgit.com/alexmwalker/6acbe9040d9fe6e5e9fd758a25e1b2a5/raw/9c8131eb2ccc1e3839a5a5114cb16b5dc74daf04/dojo.svg) no-repeat;
+  width: 100%;
+  height: 800px;
+  background-size: 100% auto;
+  padding-top: 10px;
+}
+
+.quiz-body {
+  background: white;
+  margin: 150px 33%;
+  padding: 10px 20px 50px 20px;
+  -webkit-box-shadow: 4px 4px 11px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 4px 11px 3px rgba(0, 0, 0, 0.3);
+}
+
+.quizH1 {
+  color: #611bbd;
+  font-family: "Baloo Da", cursive;
+  font-weight: 900;
+  text-align: center;
+  font-size: 48px;
+  margin: 0;
+}
+
+.quizButton {
+  color: #ffffff;
+  background-color: #611BBD;
+  border-color: #130269;
+  border-radius: 4px;
+  margin: 0.2em 0;
+  display: block;
+  width: 100%;
+  font-size: 24px;
+}
+
+#quizQuestion {
+  font-size: 24px;
+}
+
+#quizResult {
+  color: #fff;
+  margin: 0.2em 0;
+  width: 100%;
+  text-align: center;
+}
+
+.quizCorrect {
+  background-color: #0c0;
+}
+
+.quizWrong {
+  color: #fff;
+  background-color: #c00;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -64,8 +64,81 @@ header>h1{
 
 
 }
-// #result_display{
-//     display:none;
-// }
+
+
+
+/*quiz ninja*/
+
+.quizBody{
+    background: colors.$bodyBG;
+    font-family: fonts.$roboto;
+    }
+
+
+    .dojo{
+    background: url(https://cdn.rawgit.com/alexmwalker/6acbe9040d9fe6e5e9fd758a25e1b2a5/raw/9c8131eb2ccc1e3839a5a5114cb16b5dc74daf04/dojo.svg) no-repeat;
+    width: 100%;
+
+
+height: 800px;
+background-size: 100% auto;
+padding-top: 10px;
+}
+
+
+.quiz-body{
+background: colors.$background;
+margin: 150px 33%;
+padding: 10px 20px 50px 20px;
+-webkit-box-shadow: 4px 4px 11px 3px colors.$boxShadow;
+-moz-box-shadow: 4px 4px 11px 3px colors.$boxShadow;
+box-shadow: 4px 4px 11px 3px colors.$boxShadow;
+}
+
+
+.quizH1{
+color: colors.$h1;
+font-family: fonts.$balooDa;
+font-weight: 900;
+text-align: center;
+font-size: 48px;
+margin: 0;
+}
+
+
+.quizButton {
+color: colors.$buttonColor;
+background-color: colors.$buttonBg;
+border-color:colors.$buttonBorder;
+border-radius: 4px;
+margin: 0.2em 0;
+display: block;
+width: 100%;
+font-size: 24px;
+}
+
+
+#quizQuestion {
+font-size: 24px;
+}
+
+
+#quizResult{
+color: colors.$result;
+margin: 0.2em 0;
+width: 100%;
+text-align: center;
+}
+
+
+.quizCorrect {
+    background-color:colors.$correct;
+    }
+
+
+    .quizWrong {
+    color:colors.$wrong;
+    background-color:colors.$wrongBg;
+    }
 
 
