@@ -73,7 +73,7 @@ ol.padding {
   background-color: #c4ac7c;
   border: solid 2px #9e391a;
   margin-right: 1rem;
-  padding: 1rnodeem;
+  padding: 1rem;
 }
 
 .sidebar ul {
@@ -6231,6 +6231,11 @@ header > h1 {
 
 .fas.fa-user-ninja, .fas.fa-book-reader {
   padding: 0rem 2rem;
+}
+
+.rainbow {
+  width: 100%;
+  height: 100vh;
 }
 
 /*quiz ninja*/
