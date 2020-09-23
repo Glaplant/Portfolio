@@ -81,6 +81,21 @@ ol.padding {
   padding: 0;
 }
 
+.sidebar li {
+  color: #354536;
+  font-weight: 300;
+  font-size: 2rem;
+  font-family: "Nunito", sans-serif;
+}
+
+.right_sidebar {
+  background-color: #c4ac7c;
+  border: solid 2px #9e391a;
+  margin-left: 1rem;
+  margin-right: 0;
+  padding: 1rem;
+}
+
 .notes {
   background-color: #c4ac7c;
   border: solid 2px #9e391a;
@@ -6214,7 +6229,7 @@ main > h2 {
   color: #354536;
 }
 
-h2.book_examples {
+h2.book_examples, h3.book_examples {
   margin: 0;
 }
 

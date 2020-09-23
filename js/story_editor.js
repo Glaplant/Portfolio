@@ -1,22 +1,22 @@
 function loadStory(){
-    var storyName = document.querySelector("#name_input").value
-    var storyHTML = localStorage.getItem("storyName")
+    const storyName = document.querySelector("#name_input").value
+    const storyHTML = localStorage.getItem("storyName")
     document.querySelector("#story_editor").value = storyHTML
     }
 
 function saveStory(){
-    var storyName = document.querySelector("#name_input").value
-    var storyHTML = document.querySelector("#story_editor").value
+    const storyName = document.querySelector("#name_input").value
+    const storyHTML = document.querySelector("#story_editor").value
     localStorage.setItem(storyName, storyHTML)
     
 }
 
 function displayStory(){
-    var storyName = document.querySelector("#name_input").value
-    var storyHTML = document.querySelector("#story_editor").value
-    var story = document.querySelector("#story_display");
-    var h2 = document.createElement('h2');
-    var p = document.createElement('p');
+    const storyName = document.querySelector("#name_input").value
+    const storyHTML = document.querySelector("#story_editor").value
+    const story = document.querySelector("#story_display");
+    const h2 = document.createElement('h2');
+    const p = document.createElement('p');
     story.appendChild(h2);
     story.appendChild(p);
     document.querySelector("#story_display>h2").innerHTML = storyName
