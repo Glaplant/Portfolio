@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team 11 | Week 2</title>
+</head>
+<body>
+    <p>This input will take a number and add all the numbers leading up to it and output a new number.</p>
+    <p>Example n=5 1+2+3+4+5 = output</p>
+    <input placeholder="Enter a valid number" type="number" id="numOne" required></input>
+    <button  onclick="firstInput()">First Number</button> 
+    <div>Answer One:<span  id="answerOne" class="error"></span></div>  
+<p>This input will take a number and calculate a new output using the given number and the previouse output.</p>
+    <input placeholder="Enter a valid number" type="number" id="numTwo" required ></input>
+    <button name="button" value='add'class="user_error button" onclick="addButton()">+</button> 
+    <button name="button" value='subtract'class="user_error button" onclick="subButton()">-</button> 
+    <button name="button" value='multiply'class="user_error button" onclick="mulButton()">*</button> 
+    <button name="button" value="divide" class="user_error button" onclick="divButton()">/</button> 
+    <div>Answer Two:<span id='answerTwo'></span></div> 
+    
+
+
+<script src="../js/wk2.js"></script> 
+</body>
+</html>
