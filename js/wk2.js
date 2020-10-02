@@ -5,11 +5,19 @@
 
 /*Buttons*/
 
+
+
 function addButton(){
-    let name = document.getElementsByName("button")[0].value;
-    let number = firstInput();
-    let value = secondInput();
-    let answer = calculate(name,number,value);
+
+    let name = ;
+    let firstValue = 1;
+    let secondValue = 1;
+    let answer = 1;
+
+    name = document.getElementsByName("button")[0].value;
+    firstValue = retriveOutput();
+    secondValue = secondInput();
+    answer = calculate(name,firstValue,secondValue);
     document.querySelector('#answerTwo').innerHTML = answer
         
 }
@@ -17,7 +25,8 @@ function addButton(){
 
  function subButton(){
     let name = document.getElementsByName("button")[1].value;
-    let number = firstInput();
+    let number = document.querySelector("#answerOne").innerHTML;
+    parseFloat(number);
     let value = secondInput();
     let answer = calculate(name,number,value);
     document.querySelector('#answerTwo').innerHTML = answer
@@ -28,7 +37,8 @@ function addButton(){
 
 function mulButton(){
     let name = document.getElementsByName("button")[2].value;
-    let number = firstInput();
+    let number = document.querySelector("#answerOne").innerHTML;
+    parseFloat(number);
     let value = secondInput();
     let answer = calculate(name,number,value);
     document.querySelector('#answerTwo').innerHTML = answer
@@ -37,7 +47,8 @@ function mulButton(){
 
 function divButton(){
     let name = document.getElementsByName("button")[3].value;
-    let number = firstInput();
+    let number = document.querySelector("#answerOne").innerHTML;
+    Number(number);
     let value = secondInput();
     let answer = calculate(name,number,value);
     document.querySelector('#answerTwo').innerHTML = answer
@@ -47,31 +58,45 @@ function divButton(){
 
 /*Inputs*/
 
+
+function retriveOutput(){
+
+    let number = localStorage.getItem(firstValue);
+    parseFloat(number);
+    return number
+}
+
+
+
 function firstInput(){
-    let numberOne;
-    let floatNumber;
-    let empty = true;
+    let entry;
+    let empty = false;
+    let valid = true;
     
-   
-    numberOne = document.querySelector("#numOne").value;
-    floatNumber = parseFloat(numberOne);
-    empty = emptyInput(floatNumber);
+    entry = document.querySelector("#numOne").value;
+    empty = emptyInput(entry,empty);
+
     if(empty){
-        document.querySelector('.error').innerHTML = "<p> Please enter a valid number</p>" 
+        document.querySelector('#answerOne').innerHTML = "<p> Please enter a valid number</p>" 
         }
 
-    let valid = validateNumber(floatNumber);
+    valid = validateNumber(entry,valid);
 
     if(!valid){
-        document.querySelector('.error').innerHTML = "<p> Please enter a valid number</p>" 
+        document.querySelector('#answerOne').innerHTML = "<p> Please enter a valid number</p>" 
+        }
+        else{
+            Number(entry);
         }
 
-    sum = mathLoop(floatNumber);
+    sum = mathLoop(entry);
     
 
    if(sum){document.querySelector('#answerOne').innerHTML = sum
     
     }
+
+    
 
     return sum;
 
@@ -86,11 +111,11 @@ function secondInput(){
     let floatNumber = parseFloat(numberTwo);
     let empty = emptyInput(floatNumber);
     if(empty){
-        document.querySelector('.error').innerHTML = "<p> Please enter a valid number</p>" 
+        document.querySelector('#answerTwo').innerHTML = "<p> Please enter a valid number</p>" 
         }
     let valid = validateNumber(floatNumber);
     if(!valid){
-        document.querySelector('.error').innerHTML = "<p> Please enter a valid number</p>" 
+        document.querySelector('#answerTwo').innerHTML = "<p> Please enter a valid number</p>" 
         }
         
     return floatNumber;
@@ -107,24 +132,23 @@ function secondInput(){
 
 
 
-function emptyInput(floatNumber){
-let empty = floatNumber;
+function emptyInput(entry,empty){
+let value = parseFloat(entry);
 
-    if(empty === null ){
-    return false;
+ if(Number.isNaN(value)){
+    empty = true;
     }
+    return empty;
 }
 
 
-function validateNumber(floatNumber){
-    let valid = floatNumber;
-  
-    if (isNaN (valid) ){
-    return false;
+function validateNumber(entry,valid){
+let value = parseFloat(entry);
+    if (Number.isNaN (value) ){
+    valid = false;
     } 
-    else{
-    return true;
-    }
+  
+    return valid;
 }
 // }
 
@@ -132,8 +156,8 @@ function validateNumber(floatNumber){
 
 /*Calculation*/
 
-function mathLoop(floatNumber){
-let number = floatNumber;
+function mathLoop(entry){
+let number = entry;
 let sum = 0;
 
 
