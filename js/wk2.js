@@ -7,20 +7,21 @@
 
 
 
-function addButton(){
+function addButton() {
 
-    let name = ;
-    let firstValue = 1;
-    let secondValue = 1;
-    let answer = 1;
-
-    name = document.getElementsByName("button")[0].value;
-    firstValue = retriveOutput();
-    secondValue = secondInput();
-    answer = calculate(name,firstValue,secondValue);
+    let name = document.getElementsByName("button")[0].value;
+    let number = document.querySelector("#answerOne").innerHTML;
+    number = parseFloat(number);
+    let value = secondInput();
+    let answer = calculate(name,number,value);
     document.querySelector('#answerTwo').innerHTML = answer
+   
+   
+    
         
 }
+
+
 
 
  function subButton(){
@@ -59,19 +60,13 @@ function divButton(){
 /*Inputs*/
 
 
-function retriveOutput(){
-
-    let number = localStorage.getItem(firstValue);
-    parseFloat(number);
-    return number
-}
-
-
 
 function firstInput(){
     let entry;
     let empty = false;
     let valid = true;
+    let sum = 0;
+    
     
     entry = document.querySelector("#numOne").value;
     empty = emptyInput(entry,empty);
@@ -132,8 +127,9 @@ function secondInput(){
 
 
 
-function emptyInput(entry,empty){
+function emptyInput(entry){
 let value = parseFloat(entry);
+let empty = false;
 
  if(Number.isNaN(value)){
     empty = true;
@@ -142,8 +138,9 @@ let value = parseFloat(entry);
 }
 
 
-function validateNumber(entry,valid){
+function validateNumber(entry){
 let value = parseFloat(entry);
+let valid = true;
     if (Number.isNaN (value) ){
     valid = false;
     } 
@@ -156,8 +153,8 @@ let value = parseFloat(entry);
 
 /*Calculation*/
 
-function mathLoop(entry){
-let number = entry;
+const mathLoop = (entry)=>{
+let number = parseFloat(entry);
 let sum = 0;
 
 
@@ -171,7 +168,7 @@ let sum = 0;
 
 
 
-function calculate(name, number,value){
+const calculate = function(name, number,value){
 
 
 switch(name){
