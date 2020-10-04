@@ -65,14 +65,51 @@ const people = [
   'Blake, William'
 ];
 
-// Array.prototype.filter()
+ //Array.prototype.filter()
 // 1. Filter the list of inventors for those who were born in the 1500's
+
+const result = inventors.filter(list => list.year < 1600 && list.year >= 1500 );
+const inventorList = document.querySelector('#inventorList');
+//console.log(result);
+
+for(let i=0;i<result.length;i++){
+    
+    const li = document.createElement("li");
+    li.textContent = result[i].first + '    ' + result[i].last + ',   Born: ' + result[i].year + ' Died:  ' + result[i].passed ;
+    inventorList.appendChild(li);
+    
+
+}
+
+// }
 
 // Array.prototype.map()
 // 2. Give us an array of the inventors' first and last names
+const inventorFirstLast = document.querySelector('#inventorFirstLast');
+const inventorsMap = inventors.map( names =>  names.first + "  " + names.last);
 
+for(let i = 0;i<inventorsMap.length;i++){
+    
+     const li = document.createElement('li');
+     li.textContent = inventorsMap[i];
+     inventorFirstLast.appendChild(li);
+
+}
+    
 // Array.prototype.sort()
 // 3. Sort the inventors by birthdate, oldest to youngest
+
+let yearSort = inventors.sort((a,b)=>{a=a.year; b=b.year; return b-a });
+//console.log(yearSort);
+const inventorAge = document.querySelector('#inventorAge');
+for(let i = 0;i<yearSort.length;i++){
+    
+    const li = document.createElement('li');
+    li.textContent = yearSort[i].first + "   " + yearSort[i].last  + "   " +  yearSort[i].year  + "   " + yearSort[i].passed;
+    inventorAge.appendChild(li);
+    //console.log(yearSort[i])
+
+}
 
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live?
@@ -107,68 +144,68 @@ const data = [
   'truck'
 ];
 
-const ol = document.getElementById('inventorList');
+// const ol = document.getElementById('inventorList');
 
-for ( i = 0, max = inventors.length; i < max ; i++)
-{
+// for ( i = 0, max = inventors.length; i < max ; i++)
+// {
 
-if ( inventors[i].year >= 1500 && inventors[i].year <= 1600 )
+// if ( inventors[i].year >= 1500 && inventors[i].year <= 1600 )
 
-{
-const li = document.createElement('li');
- const a = document.createElement('a');
-// li.innerHTML = links[i].label;
- a.innerHTML = inventors[i];
- a.innerHTML = inventors[i].first + " " + inventors[i].last + " " + inventors[i].year;
- ol.appendChild(li);  
- li.appendChild(a);
+// {
+// const li = document.createElement('li');
+//  const a = document.createElement('a');
+// // li.innerHTML = links[i].label;
+//  a.innerHTML = inventors[i];
+//  a.innerHTML = inventors[i].first + " " + inventors[i].last + " " + inventors[i].year;
+//  ol.appendChild(li);  
+//  li.appendChild(a);
 
-}
-}
+// }
+// }
 
-const first = document.getElementById('inventorFistLast');
-
-
-for ( i = 0, max = inventors.length; i < max ; i++)
-{
-
-{
-
-const li2 = document.createElement('li');
- const a2 = document.createElement('a');
-// li.innerHTML = links[i].label;
- a2.textContent = inventors[i].first + " " + inventors[i].last;
- first.appendChild(li2);  
- li2.appendChild(a2);
-
-}
-}
-
-const age = document.getElementById('inventorAge');
-
-function compare (a,b)
-{
-return a.year - b.year;
-}
+// const first = document.getElementById('inventorFistLast');
 
 
-for ( i = 0, max = inventors.length; i < max ; i++)
-{
+// for ( i = 0, max = inventors.length; i < max ; i++)
+// {
 
-inventors.sort(compare);
+// {
 
-{
+// const li2 = document.createElement('li');
+//  const a2 = document.createElement('a');
+// // li.innerHTML = links[i].label;
+//  a2.textContent = inventors[i].first + " " + inventors[i].last;
+//  first.appendChild(li2);  
+//  li2.appendChild(a2);
 
-const li3 = document.createElement('li');
- const a3 = document.createElement('a');
-// li.innerHTML = links[i].label;
- a3.textContent = inventors[i].first + " " + inventors[i].last
- + " Birth Year:" + inventors[i].year;
- age.appendChild(li3);  
- li3.appendChild(a3);
+// }
+// }
 
-}
-}
+// const age = document.getElementById('inventorAge');
+
+// function compare (a,b)
+// {
+// return a.year - b.year;
+// }
+
+
+// for ( i = 0, max = inventors.length; i < max ; i++)
+// {
+
+// inventors.sort(compare);
+
+// {
+
+// const li3 = document.createElement('li');
+//  const a3 = document.createElement('a');
+// // li.innerHTML = links[i].label;
+//  a3.textContent = inventors[i].first + " " + inventors[i].last
+//  + " Birth Year:" + inventors[i].year;
+//  age.appendChild(li3);  
+//  li3.appendChild(a3);
+
+// }
+// }
 
 
 
