@@ -113,6 +113,8 @@ for(let i = 0;i<yearSort.length;i++){
 
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live?
+const numbers = inventors.reduce((total,inventor) => {return total + (inventor.passed - inventor.years)},0);
+console.log(numbers);
 
 // 5. Sort the inventors by years lived
 
@@ -144,68 +146,9 @@ const data = [
   'truck'
 ];
 
-// const ol = document.getElementById('inventorList');
-
-// for ( i = 0, max = inventors.length; i < max ; i++)
-// {
-
-// if ( inventors[i].year >= 1500 && inventors[i].year <= 1600 )
-
-// {
-// const li = document.createElement('li');
-//  const a = document.createElement('a');
-// // li.innerHTML = links[i].label;
-//  a.innerHTML = inventors[i];
-//  a.innerHTML = inventors[i].first + " " + inventors[i].last + " " + inventors[i].year;
-//  ol.appendChild(li);  
-//  li.appendChild(a);
-
-// }
-// }
-
-// const first = document.getElementById('inventorFistLast');
 
 
-// for ( i = 0, max = inventors.length; i < max ; i++)
-// {
 
-// {
-
-// const li2 = document.createElement('li');
-//  const a2 = document.createElement('a');
-// // li.innerHTML = links[i].label;
-//  a2.textContent = inventors[i].first + " " + inventors[i].last;
-//  first.appendChild(li2);  
-//  li2.appendChild(a2);
-
-// }
-// }
-
-// const age = document.getElementById('inventorAge');
-
-// function compare (a,b)
-// {
-// return a.year - b.year;
-// }
-
-
-// for ( i = 0, max = inventors.length; i < max ; i++)
-// {
-
-// inventors.sort(compare);
-
-// {
-
-// const li3 = document.createElement('li');
-//  const a3 = document.createElement('a');
-// // li.innerHTML = links[i].label;
-//  a3.textContent = inventors[i].first + " " + inventors[i].last
-//  + " Birth Year:" + inventors[i].year;
-//  age.appendChild(li3);  
-//  li3.appendChild(a3);
-
-// }
-// }
 
 
 
