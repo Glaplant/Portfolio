@@ -72,14 +72,15 @@ const result = inventors.filter(list => list.year < 1600 && list.year >= 1500 );
 const inventorList = document.querySelector('#inventorList');
 //console.log(result);
 
-for(let i=0;i<result.length;i++){
+result.forEach(result => {
     
     const li = document.createElement("li");
-    li.textContent = result[i].first + '    ' + result[i].last + ',   Born: ' + result[i].year + ' Died:  ' + result[i].passed ;
+    li.textContent = result.first + '    ' + result.last + ',   Born: ' + result.year + ' Died:  ' + result.passed ;
     inventorList.appendChild(li);
+
     
 
-}
+});
 
 // }
 
@@ -88,13 +89,13 @@ for(let i=0;i<result.length;i++){
 const inventorFirstLast = document.querySelector('#inventorFirstLast');
 const inventorsMap = inventors.map( names =>  names.first + "  " + names.last);
 
-for(let i = 0;i<inventorsMap.length;i++){
+inventorsMap.forEach(inventor => {
     
      const li = document.createElement('li');
-     li.textContent = inventorsMap[i];
+     li.textContent = inventor;
      inventorFirstLast.appendChild(li);
 
-}
+});
     
 // Array.prototype.sort()
 // 3. Sort the inventors by birthdate, oldest to youngest
@@ -102,14 +103,16 @@ for(let i = 0;i<inventorsMap.length;i++){
 let yearSort = inventors.sort((a,b)=>{a=a.year; b=b.year; return b-a });
 //console.log(yearSort);
 const inventorAge = document.querySelector('#inventorAge');
-for(let i = 0;i<yearSort.length;i++){
+
+yearSort.forEach(inventor =>
+{
     
     const li = document.createElement('li');
-    li.textContent = yearSort[i].first + "   " + yearSort[i].last  + "   " +  yearSort[i].year  + "   " + yearSort[i].passed;
+    li.textContent = inventor.first + "   " + inventor.last  + "   " +  inventor.year  + "   " + inventor.passed;
     inventorAge.appendChild(li);
     //console.log(yearSort[i])
 
-}
+});
 
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live?
@@ -118,8 +121,9 @@ const numbers = inventors.reduce((total,inventor) => {
 }, 0);
 console.log(numbers);
 
+
 // 5. Sort the inventors by years lived
-const oldest = inventors.sort(function(a, b) {
+const oldest = inventors.sort((a, b) => {
     const lastInventor = a.passed - a.year;
     const nextInventor = b.passed - b.year;
     return lastInventor > nextInventor ? -1 : 1;
@@ -154,6 +158,23 @@ const data = [
   'car',
   'truck'
 ];
+
+
+
+//const instances = data.reduce((total,item) =>{
+
+  const transportation = data.reduce((obj, item) =>{
+    if (!obj[item]) {
+      obj[item] = 0;
+    }
+    obj[item]++;
+    return obj;
+  }, {});
+
+  
+
+
+
 
 
 

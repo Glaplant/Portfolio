@@ -27,7 +27,7 @@ function addButton() {
  function subButton(){
     let name = document.getElementsByName("button")[1].value;
     let number = document.querySelector("#answerOne").innerHTML;
-    parseFloat(number);
+    number = parseFloat(number);
     let value = secondInput();
     let answer = calculate(name,number,value);
     document.querySelector('#answerTwo').innerHTML = answer
@@ -39,7 +39,7 @@ function addButton() {
 function mulButton(){
     let name = document.getElementsByName("button")[2].value;
     let number = document.querySelector("#answerOne").innerHTML;
-    parseFloat(number);
+    number = parseFloat(number);
     let value = secondInput();
     let answer = calculate(name,number,value);
     document.querySelector('#answerTwo').innerHTML = answer
@@ -49,7 +49,7 @@ function mulButton(){
 function divButton(){
     let name = document.getElementsByName("button")[3].value;
     let number = document.querySelector("#answerOne").innerHTML;
-    Number(number);
+    number = parseFloat(number);
     let value = secondInput();
     let answer = calculate(name,number,value);
     document.querySelector('#answerTwo').innerHTML = answer
@@ -91,14 +91,10 @@ function firstInput(){
     
     }
 
-    
-
     return sum;
-
-
-    
-    
 }
+
+
 
 function secondInput(){
 
@@ -114,9 +110,6 @@ function secondInput(){
         }
         
     return floatNumber;
-   
-    
-   
    
     
 }
@@ -168,7 +161,7 @@ let sum = 0;
 
 
 
-const calculate = function(name, number,value){
+const calculate = (name, number,value) => {
 
 
 switch(name){
