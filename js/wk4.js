@@ -65,3 +65,8 @@ let currentSquare = event.target;
     currentSquare.innerHTML = answer;
 }
 
+
+function reset(){
+   window.location.reload();
+
+}

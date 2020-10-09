@@ -6333,10 +6333,21 @@ header > h1 {
 
 .tic_tac_header {
   display: block;
-  font-size: 4rem;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  font: 900 5rem "Roboto", sans-serif;
+  color: #354536;
+}
+
+h2.tic_tac_header {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font: 200 3rem "Roboto", sans-serif;
+  margin-bottom: 2rem;
+  color: #354536;
 }
 
 .ticTacToe > div {
@@ -6406,5 +6417,12 @@ header > h1 {
 
 .ticTacToe > div:hover {
   background-color: rgba(191, 243, 191, 0.5);
+}
+
+div#turnDiv {
+  font: 600 2rem "Roboto", sans-serif;
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -163,10 +163,22 @@ text-align: center;
 
 .tic_tac_header {
     display:block;
-    font-size: 4rem;
     text-align: center;
     margin-left:auto;
     margin-right:auto;
+    font : 900 5rem fonts.$roboto;
+    color:colors.$dark_green
+}
+
+h2.tic_tac_header{
+    display:block;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    font : 200 3rem fonts.$roboto;
+    margin-bottom:2rem;
+    color:colors.$dark_green
+
 }
 
 
@@ -245,4 +257,11 @@ $bottomRight:".ticTacToe > div:nth-Child(9)";
 .ticTacToe > div:hover {
     background-color:rgba(191, 243, 191, 0.5);
 
+}
+
+div#turnDiv{
+    font : 600 2rem fonts.$roboto;
+    text-align: center;
+    margin-top:2rem;
+    padding:1rem;
 }
