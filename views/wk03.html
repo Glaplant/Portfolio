@@ -60,7 +60,72 @@
     <p>JavaScript code can be placed inside square brackets and the property key will be the return value of that code.</p>
     <p>A new property can be added to an object using a symbol as a key if the square bracket notation is used</p>
     <p>Ch6</p>
-    <p></p>
+    <p>The DOM treats everything on a web page as a node. HTML tags, the text inside these tags, even the attributes of a tag are all nodes. The HTML tag is the root node, and every other part of the document is a child node of this.</p>
+    <p> We can use JavaScript to access and modify different parts of a web page using a special built-in object called document .</p>
+    <p>These methods will return a node object or a node list, which is an array-like object.</p>
+    <p>we can use the nodeType property to find out what type of node it is: node.nodeType</p>
+    <P>All nodes have a numerical code to signify what type they are.</P>
+    <ul>
+        <li>
+            1 Element
+        </li>
+        <li>
+            2 Attribute
+        </li>
+        <li>
+            3 Text
+        </li>
+        <li>
+            8 Comment
+        </li>
+        <li>
+            9 Body
+        </li>
+    </ul>
+    <p> the nodeName property to find the name of the element: .nodeName</p>
+    <p>Node lists are array-like objects, but they are not arrays. You can access each item using index notation. For example, document.images[0] will return the first image in the node list of all the images in the document.</p>
+    <p>They also have a length property, but you cant use other methods such as slice(),Splice(), and join()</p>
+    <p> you can turn them into an array with Array.from() or the spread opperator[...document.images]</p>
+    <p> JQuerry uses document.querySelectorAll() in the background whenever it can</p>
+    <p>The childNodes property is a list of all the nodes that are children of the node concerned.</p>
+    <p>The children property only returns anyelementnodes that are children of that node</p>
+    <P>firstChild,lastChild</p>
+    <p>The parentNode property returns the parent node of an element</p>
+    <p> we can find the text contained inside it using the nodeValue method:</p>
+    <p>textContent property. This will return the text content of an element as a string:</p>
+    <p>The getAttribute() method returns the value of the attribute provided as an argument:</p>
+    <p>The setAttribute can change the value of an element’s attributes. It takes two arguments: the attribute that you wish to change, and the new value of that attribute.</p>
+    <p>There is also a className property that allows the class of an element to be set directly. In addition, it can be used to find out the value of the class attribute:</p>
+    <p>Changing the className property of an element by assignment will overwrite all other classes that have already been set on the element.
+        This problem can be avoided by using the classList property instead.</p>
+        <p>The classList property is a list of all the classes an element has</p>
+    <p> add method can be used to add a class to an element without overwriting any classes that already exist.</p>
+    <p> remove method will remove a specific class from an element</p>
+    <p>The toggle method is a particularly useful method that willadda class if an element doesn’t have it already, andremovethe class if it does have it. It returns true if the class was added and false if it was removed.</p>
+    <p>The contains method will check to see if an element has a particular class:</p>
+    <p>The document object has a createElement() method that takes a tag name as a parameter and returns that element. </p>
+    <p>text node can be created using the document.createTextNode() method. It takes a parameter, which is a string containing the text that goes in the node.</p>
+    <p>Every node object has an appendChild() method that will add another node (given as an argument) as a child node.</p>
+    <p>The function will create the new element, and then return that element:</p>
+    <p>function createElement (tag,text) {<br>
+        const el = document.createElement(tag);<br>
+        el.textContent = text;<br>
+        return el
+    }</p>
+    <p>The insertBefore() method will place a new element before another element in the markup.</p>
+    <p>It takes two parameters: the first is the new node to be added, and the second is the node that you want it to go before</p>
+    <p>The appendChild() and insertBefore() methods can be used to move markup that already exists in the DOM as well. This is because a reference to a single DOM element can only exist once in the page, so if you use multiple inserts and appends, only the last one will have an effect</p>
+    <p>An element can be removed from a page using the removeChild() method.</p>
+    <p>The replaceChild() method can be used to replace one node with another.</p>
+    <p>innerHTML  It returns all the child elements of an element as a string of HTML</p>
+    <p>To stop any malicious content being added to a page using innerHTML , any code contained within <code>&lt;script&gt;</code> tags is not executed.</p>
+    <p>document.getElementsByClassName() and document.getElementsByTagName() are discouraged</p>
+    <p>Every element node has a style property. This can be used to dynamically modify the presentation of any element on a web page.</p>
+    <p>Any CSS property names that are separated by dashes must be written in camelCase notation, so the dash is removed and the next letter is capitalized because dashes are not legal characters in property names.
+
+        For example, the CSS property background-color becomes backgroundColor .</p>
+        <p>Alternatively, the bracket notation that we saw in chapter 5 can also be used, meaning that CSS properties can be provided as a string and don't need the camelCase notation:</p>
+    <p>it is much better practice to dynamically change the class of an element and keep the relevant styles for each class in a separate stylesheet.</p>
     <p>Ch7</p>
     <p></p>
 </article>

@@ -6289,4 +6289,95 @@ header > h1 {
   background-color: #c00;
 }
 
+.hide {
+  display: none;
+}
+
+.ticTacToe {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-content: center;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tic_tac_header {
+  display: block;
+  font-size: 4rem;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ticTacToe > div {
+  background-color: #bff3bf;
+  border: 1px solid;
+  text-align: center;
+  font-size: 2em;
+  padding: 0.5rem;
+}
+
+.ticTacToe > div:nth-Child(1) {
+  border: none;
+  padding: 2rem;
+}
+
+.ticTacToe > div:nth-Child(2) {
+  border-left: solid 3px;
+  border-bottom: none;
+  border-right: solid 3px;
+  border-top: none;
+  padding: 2rem;
+}
+
+.ticTacToe > div:nth-Child(3) {
+  border: none;
+  padding: 2rem;
+}
+
+.ticTacToe > div:nth-Child(4) {
+  border-top: solid 3px;
+  border-bottom: solid 3px;
+  border-left: none;
+  border-right: none;
+  padding: 2rem;
+}
+
+.ticTacToe > div:nth-Child(5) {
+  border: solid 3px;
+  padding: 2rem;
+}
+
+.ticTacToe > div:nth-Child(6) {
+  border-bottom: solid 3px;
+  border-top: solid 3px;
+  border-right: none;
+  border-left: none;
+  padding: 2rem;
+}
+
+.ticTacToe > div:nth-Child(7) {
+  border: none;
+  padding: 2rem;
+}
+
+.ticTacToe > div:nth-Child(8) {
+  border-right: solid 3px;
+  border-left: solid 3px;
+  border-bottom: none;
+  border-top: none;
+  padding: 2rem;
+}
+
+.ticTacToe > div:nth-Child(9) {
+  border: none;
+  padding: 2rem;
+}
+
+.ticTacToe > div:hover {
+  background-color: rgba(191, 243, 191, 0.5);
+}
+
 /*# sourceMappingURL=styles.css.map */

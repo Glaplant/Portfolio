@@ -132,13 +132,8 @@ div.notes > h2 {
 }
 
 .flex_parent {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row;
-          flex-flow: row;
+  flex-flow: row;
 }
 
 /*!
@@ -266,70 +261,49 @@ div.notes > h2 {
 }
 
 .fa-spin {
-  -webkit-animation: fa-spin 2s infinite linear;
-          animation: fa-spin 2s infinite linear;
+  animation: fa-spin 2s infinite linear;
 }
 
 .fa-pulse {
-  -webkit-animation: fa-spin 1s infinite steps(8);
-          animation: fa-spin 1s infinite steps(8);
-}
-
-@-webkit-keyframes fa-spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+  animation: fa-spin 1s infinite steps(8);
 }
 
 @keyframes fa-spin {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 .fa-rotate-90 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .fa-rotate-180 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .fa-rotate-270 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
-  -webkit-transform: rotate(270deg);
-          transform: rotate(270deg);
+  transform: rotate(270deg);
 }
 
 .fa-flip-horizontal {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
-  -webkit-transform: scale(-1, 1);
-          transform: scale(-1, 1);
+  transform: scale(-1, 1);
 }
 
 .fa-flip-vertical {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
-  -webkit-transform: scale(1, -1);
-          transform: scale(1, -1);
+  transform: scale(1, -1);
 }
 
 .fa-flip-both, .fa-flip-horizontal.fa-flip-vertical {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
-  -webkit-transform: scale(-1, -1);
-          transform: scale(-1, -1);
+  transform: scale(-1, -1);
 }
 
 :root .fa-rotate-90,
@@ -338,8 +312,7 @@ div.notes > h2 {
 :root .fa-flip-horizontal,
 :root .fa-flip-vertical,
 :root .fa-flip-both {
-  -webkit-filter: none;
-          filter: none;
+  filter: none;
 }
 
 .fa-stack {
@@ -6272,6 +6245,7 @@ header > h1 {
   margin: 150px 33%;
   padding: 10px 20px 50px 20px;
   -webkit-box-shadow: 4px 4px 11px 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 4px 4px 11px 3px rgba(0, 0, 0, 0.3);
   box-shadow: 4px 4px 11px 3px rgba(0, 0, 0, 0.3);
 }
 
@@ -6315,96 +6289,8 @@ header > h1 {
   background-color: #c00;
 }
 
-.hide {
+button + div.hide {
   display: none;
 }
 
-.ticTacToe {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 30%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.tic_tac_header {
-  display: block;
-  font-size: 4rem;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.ticTacToe > div {
-  background-color: #bff3bf;
-  border: 1px solid;
-  text-align: center;
-  font-size: 2em;
-  padding: 0.5rem;
-}
-
-.ticTacToe > div:nth-Child(1) {
-  border: none;
-  padding: 2rem;
-}
-
-.ticTacToe > div:nth-Child(2) {
-  border-left: solid 3px;
-  border-bottom: none;
-  border-right: solid 3px;
-  border-top: none;
-  padding: 2rem;
-}
-
-.ticTacToe > div:nth-Child(3) {
-  border: none;
-  padding: 2rem;
-}
-
-.ticTacToe > div:nth-Child(4) {
-  border-top: solid 3px;
-  border-bottom: solid 3px;
-  border-left: none;
-  border-right: none;
-  padding: 2rem;
-}
-
-.ticTacToe > div:nth-Child(5) {
-  border: solid 3px;
-  padding: 2rem;
-}
-
-.ticTacToe > div:nth-Child(6) {
-  border-bottom: solid 3px;
-  border-top: solid 3px;
-  border-right: none;
-  border-left: none;
-  padding: 2rem;
-}
-
-.ticTacToe > div:nth-Child(7) {
-  border: none;
-  padding: 2rem;
-}
-
-.ticTacToe > div:nth-Child(8) {
-  border-right: solid 3px;
-  border-left: solid 3px;
-  border-bottom: none;
-  border-top: none;
-  padding: 2rem;
-}
-
-.ticTacToe > div:nth-Child(9) {
-  border: none;
-  padding: 2rem;
-}
-
-.ticTacToe > div:hover {
-  background-color: rgba(191, 243, 191, 0.5);
-}
 /*# sourceMappingURL=styles.css.map */

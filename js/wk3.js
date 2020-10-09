@@ -67,7 +67,7 @@ const people = [
 
  //Array.prototype.filter()
 // 1. Filter the list of inventors for those who were born in the 1500's
-
+(function(){
 const result = inventors.filter(list => list.year < 1600 && list.year >= 1500 );
 const inventorList = document.querySelector('#inventorList');
 //console.log(result);
@@ -77,15 +77,16 @@ result.forEach(result => {
     const li = document.createElement("li");
     li.textContent = result.first + '    ' + result.last + ',   Born: ' + result.year + ' Died:  ' + result.passed ;
     inventorList.appendChild(li);
+    });
 
-    
 
-});
+}());
 
 // }
 
 // Array.prototype.map()
 // 2. Give us an array of the inventors' first and last names
+(function(){
 const inventorFirstLast = document.querySelector('#inventorFirstLast');
 const inventorsMap = inventors.map( names =>  names.first + "  " + names.last);
 
@@ -94,12 +95,15 @@ inventorsMap.forEach(inventor => {
      const li = document.createElement('li');
      li.textContent = inventor;
      inventorFirstLast.appendChild(li);
+    });
 
-});
-    
+}());
+
+
+
 // Array.prototype.sort()
 // 3. Sort the inventors by birthdate, oldest to youngest
-
+(function(){
 let yearSort = inventors.sort((a,b)=>{a=a.year; b=b.year; return b-a });
 //console.log(yearSort);
 const inventorAge = document.querySelector('#inventorAge');
@@ -114,8 +118,11 @@ yearSort.forEach(inventor =>
 
 });
 
+}());
+
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live?
+(function(){
 const numbers = inventors.reduce((total,inventor) => {
     return total + (inventor.passed - inventor.year);
 }, 0);
@@ -129,6 +136,8 @@ const oldest = inventors.sort((a, b) => {
     return lastInventor > nextInventor ? -1 : 1;
   });
   console.table(oldest);
+
+}());
 
 
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
