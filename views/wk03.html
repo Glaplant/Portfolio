@@ -24,7 +24,7 @@
 <ul>
     <!--Section2.1 Example-->
     <li>
-        <a class="section_links" href="#">TBA 
+        <a class="section_links" href="events.html">Event Listners 
 
         </a>
     </li>
@@ -41,15 +41,15 @@
 <!--notes--->
 <article class="notes">
     <h3>Notes: Novice to Ninja<i class="fas fa-user-ninja"></i></h3>
-    <h4></h4>
+   
     <ul>
         <li>Ch5 Objects</li>
         <li>Ch6 DOM</li>
         <li>Ch7 Events</li>
     </ul>
 
-    <p>Ch5
-    </p>
+    <h3>Ch5
+    </h3>
     <p>Objects are limited to using strings for key values, whereas maps can use any data type as a key.</p>
     <p>There is no efficient way to find the number of key-value pairs an object has, whereas this is easy to do with maps using the size property.</p>
     <p>Objects have methods that can be called (see Chapter 5) and prototypes that can be used to create a chain of inheritance (see Chapter 12), whereas maps are solely focused on the storage and retrieval of key-value pairs.</p>
@@ -59,7 +59,7 @@
     <p>The symbols used for property keys are not limited to being used by only one object - they can be reused by any other object</p>
     <p>JavaScript code can be placed inside square brackets and the property key will be the return value of that code.</p>
     <p>A new property can be added to an object using a symbol as a key if the square bracket notation is used</p>
-    <p>Ch6</p>
+    <h3>Ch6</h3>
     <p>The DOM treats everything on a web page as a node. HTML tags, the text inside these tags, even the attributes of a tag are all nodes. The HTML tag is the root node, and every other part of the document is a child node of this.</p>
     <p> We can use JavaScript to access and modify different parts of a web page using a special built-in object called document .</p>
     <p>These methods will return a node object or a node list, which is an array-like object.</p>
@@ -126,9 +126,75 @@
         For example, the CSS property background-color becomes backgroundColor .</p>
         <p>Alternatively, the bracket notation that we saw in chapter 5 can also be used, meaning that CSS properties can be provided as a string and don't need the camelCase notation:</p>
     <p>it is much better practice to dynamically change the class of an element and keep the relevant styles for each class in a separate stylesheet.</p>
-    <p>Ch7</p>
-    <p></p>
+    <h3>Ch7</h3>
+    <p>In line JS is not recomended,inline event handlers are best avoided</p>
+    <p>The addEventListener() method is called on a node object, the node to which the event listener is being applied</p>
+    <p> Example: document.body.addEventListener('click',doSomething);<br>
+        Its first parameter is the type of event, and the second is a <a href="wk02.html#callBack">callback</a> function that is invoked when the event occurs.
+    </p>
+    
+<h4>Types of Events</h4>
+<p>The type property returns the type of event that occurred,</p>
+<code>function doSomething(event){
+    console.log(event.type);
+}</code>
+<p>The parameter does not have to be called event . It can be given any legal variable name, although calling it event can make it easier to read the code. Many developers often abbreviate it to just e .</p>
+<ol>
+    <li></li>
+</ol>
+<p>The target property returns a reference to the node that fired the event.</p>
+<br>
+<p>Example: <code>function doSomething(event){
+    console.log(event.target);
+}</code></p>
+<br>
+<p>The screenX and screenY properties show the number of pixels from the left and top of the screen respectively where the event took place.<br>
+<br>
+    The clientX and clientY properties show the number of pixels from the left and top of the client that is being used (usually the browser window).<br>
+  <br>  
+    The pageX and pageY properties show the number of pixels from the left and top, respectively, where the event took place in thedocument. This property takes account of whether the page has been scrolled.</p>
+
+<P>There is also the dblclick event, which occurs when the user doubleclicks on the element to which the event listener is attached.</p>
+<h4>Warning</h4>
+<p>You should be very cautious of attaching both a click and doubleclick event to the same element. This is because it’s impossible to tell if a click is the first click of a doubleclick or just a single click. This means that a doubleclick event willalwayscause the click event to fire.</p>
+<h4>Key Board Events</h4>
+<p>keydown event occurs when a key is pressed and willcontinue to occurif the key is held down.</p><br>
+<p>The keypress event occurs after a keydown event but before a keyup event.<br>
+     The keypress event only occurs for keys that produce character input (plus the 'Delete' key).<br>
+    This means that it’s the most reliable way to find out the character that was pressed on the keyboard.</p><br>
+    The keyup event occurs when a key is released.</p>
+
+
+
+
+
+
+
+
 </article>
+
+<aside class="sidebar right_sidebar">
+    <h3 class="book_examples">Events and Properties</h3>
+    <ul>
+        <li>addEventListener()</li>
+        <li>target</li>
+        <li> screenX</li>
+        <li> screenY</li>
+        <li>clientX</li>
+        <li>clientY</li>
+        <li>pageX</li>
+        <li>pageY</li>
+        <li>mousedown</li> 
+        <li>mousedup</li> 
+        <li>click</li>
+        <li>dblclick</li>
+        <li>mouseover</li>
+        <li>mouseout</li>
+       
+    </ul>
+</aside>
+
+
 </main>
 
 
