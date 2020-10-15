@@ -50,15 +50,29 @@
 
     <h3>Ch5
     </h3>
+    <p>An object in JavaScript is a self-contained set of related values and functions. They act as a collection of named properties that map to any JavaScript value such as strings, numbers, booleans, arrays and functions. If a property’s value is a function, it is known as amethod.</p>
+    <p>[Objects]...they can be employed to encapsulate code that can be reused throughout a program</p>
+    <p>Object literals are a distinguishing feature of the JavaScript language, as they allow objects to be created quickly without the need for defining a class.</p>
     <p>Objects are limited to using strings for key values, whereas maps can use any data type as a key.</p>
     <p>There is no efficient way to find the number of key-value pairs an object has, whereas this is easy to do with maps using the size property.</p>
     <p>Objects have methods that can be called (see Chapter 5) and prototypes that can be used to create a chain of inheritance (see Chapter 12), whereas maps are solely focused on the storage and retrieval of key-value pairs.</p>
     <p>The value of an object's properties can be accessed directly, whereas maps restrict you to using the get() method to retrieve any values.</p>
     <p>The conditional <a href"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">(ternary) operator</a> is the only JavaScript operator that takes three operands: a condition followed by a question mark (?), then an expression to execute if the condition is truthy followed by a colon (:), and finally the expression to execute if the condition is falsy. This operator is frequently used as a shortcut for the if statement.</p>
+    <h3>Computed Properties</h3>
+    <p>This means that JavaScript code can be placed inside square brackets and the property key will be the return value of that code.</p>
     <p>A symbol value may be used as an identifier for object properties; this is the data type's primary purpose,</p>
     <p>The symbols used for property keys are not limited to being used by only one object - they can be reused by any other object</p>
     <p>JavaScript code can be placed inside square brackets and the property key will be the return value of that code.</p>
     <p>A new property can be added to an object using a symbol as a key if the square bracket notation is used</p>
+    <p> object literal notation is the preferred way of creating objects.</p>
+    <h3>Calling Methods</h3>
+    <p>Calling a method is the same as invoking a function, so parentheses need to be placed after the method name:</p>
+    <p>The (in) operator can be used to check whether an object has a particular property</p>
+    <p>hasOwnProperty() method</p>
+    <p>objects can inherit properties from other objects, so all objects have a method called hasOwnProperty(). 
+        This can be used to check whether an object has a property that is its own, rather than one that has been inherited</p>
+        <p>We can loop through all of an object’s properties and methods by using a for in loop.</p>
+        <p>The Object.keys() method will return an array of all the keys of any object that is provided as an argument</p>
     <h3>Ch6</h3>
     <p>The DOM treats everything on a web page as a node. HTML tags, the text inside these tags, even the attributes of a tag are all nodes. The HTML tag is the root node, and every other part of the document is a child node of this.</p>
     <p> We can use JavaScript to access and modify different parts of a web page using a special built-in object called document .</p>
@@ -196,7 +210,9 @@
 
 
 </main>
-
+<footer>
+    
+</footer>
 
 </body>
 </html>
