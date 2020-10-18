@@ -6449,10 +6449,11 @@ div#turnDiv {
   padding: 0;
 }
 
-.flex_parent {
+.flexParent {
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin-bottom: 1rem;
+  display: flex;
 }
 
 .directions {

@@ -35,7 +35,7 @@ function renderOneHike(hike) {
 
   item.innerHTML = ` <h2>${hike.name}</h2>
   <div class="toggle visible">
-    <div class="flex_parent">
+    <div class="flexParent">
         <div class="image_hikes">
           <img src="${imgBasePath}${hike.imgSrc}" alt="${hike.imgAlt}">
         </div>

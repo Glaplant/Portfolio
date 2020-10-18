@@ -6477,13 +6477,16 @@ div#turnDiv {
   padding: 0;
 }
 
-.flex_parent {
+.flexParent {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .directions {
