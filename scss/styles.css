@@ -6489,6 +6489,10 @@ div#turnDiv {
   display: flex;
 }
 
+.visible {
+  display: none;
+}
+
 .directions {
   padding: 1rem;
   font-family: "Nunito", sans-serif;

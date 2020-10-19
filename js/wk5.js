@@ -34,7 +34,7 @@ function renderOneHike(hike) {
   const item = document.createElement("li");
 
   item.innerHTML = ` <h2>${hike.name}</h2>
-  <div class="toggle visible">
+  <div class=" toggle visible">
     <div class="flexParent">
         <div class="image_hikes">
           <img src="${imgBasePath}${hike.imgSrc}" alt="${hike.imgAlt}">
@@ -56,13 +56,18 @@ function renderOneHike(hike) {
   return item;
 }
 
-// // document.addEventListener("click",toggle);
 
 
-// const toggle = Array.from(document.getElementsByClassName("toggle"));
-// toggle.forEach(console.log(toggle));
-// // toggle.forEach(addEventListener("click",visible));
+const ul = document.querySelector("ul");
+ul.addEventListener('click',test);
 
-// // function visible(){
-// //   console.log("click");
-// // }
+//
+function test(event){
+   const element = event.target.nextElementSibling;
+  //const element = document.querySelector('.toggle');
+  //const sibling = element.nextSibling;
+ element.classList.toggle("visible");
+// event.target.nextSibling.classList.toggle("visible");
+  console.log(element);
+  }
+
