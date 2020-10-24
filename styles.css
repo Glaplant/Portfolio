@@ -6176,6 +6176,40 @@ readers do not read off random characters that represent icons */
   font-weight: 900;
 }
 
+/*!
+ * Font Awesome Free 5.14.0 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+@font-face {
+  font-family: "Font Awesome 5 Brands";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("../webfonts/fa-brands-400.eot");
+  src: url("../webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-brands-400.woff2") format("woff2"), url("../webfonts/fa-brands-400.woff") format("woff"), url("../webfonts/fa-brands-400.ttf") format("truetype"), url("../webfonts/fa-brands-400.svg#fontawesome") format("svg");
+}
+.fab {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+/*!
+ * Font Awesome Free 5.14.0 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("../webfonts/fa-regular-400.eot");
+  src: url("../webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-regular-400.woff2") format("woff2"), url("../webfonts/fa-regular-400.woff") format("woff"), url("../webfonts/fa-regular-400.ttf") format("truetype"), url("../webfonts/fa-regular-400.svg#fontawesome") format("svg");
+}
+.far {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+}
+
 /*run in terminal to auto compile sass*/
 /*sass --watch styles.scss:../css/styles.css*/
 body {
@@ -6289,8 +6323,244 @@ header > h1 {
   background-color: #c00;
 }
 
-button + div.hide {
+.hide {
   display: none;
+}
+
+.ticTacToe {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-content: center;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tic_tac_header {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font: 900 5rem "Roboto", sans-serif;
+  color: #354536;
+}
+
+h2.tic_tac_header {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font: 200 3rem "Roboto", sans-serif;
+  margin-bottom: 2rem;
+  color: #354536;
+}
+
+.ticTacToe > div {
+  background-color: #bff3bf;
+  border: 1px solid;
+  text-align: center;
+  font-size: 2em;
+  padding: 0.5rem;
+}
+
+.ticTacToe > div:nth-Child(1) {
+  border: none;
+  padding: 2rem;
+}
+
+.ticTacToe > div:nth-Child(2) {
+  border-left: solid 3px;
+  border-bottom: none;
+  border-right: solid 3px;
+  border-top: none;
+  padding: 2rem;
+}
+
+.ticTacToe > div:nth-Child(3) {
+  border: none;
+  padding: 2rem;
+}
+
+.ticTacToe > div:nth-Child(4) {
+  border-top: solid 3px;
+  border-bottom: solid 3px;
+  border-left: none;
+  border-right: none;
+  padding: 2rem;
+}
+
+.ticTacToe > div:nth-Child(5) {
+  border: solid 3px;
+  padding: 2rem;
+}
+
+.ticTacToe > div:nth-Child(6) {
+  border-bottom: solid 3px;
+  border-top: solid 3px;
+  border-right: none;
+  border-left: none;
+  padding: 2rem;
+}
+
+.ticTacToe > div:nth-Child(7) {
+  border: none;
+  padding: 2rem;
+}
+
+.ticTacToe > div:nth-Child(8) {
+  border-right: solid 3px;
+  border-left: solid 3px;
+  border-bottom: none;
+  border-top: none;
+  padding: 2rem;
+}
+
+.ticTacToe > div:nth-Child(9) {
+  border: none;
+  padding: 2rem;
+}
+
+.ticTacToe > div:hover {
+  background-color: rgba(191, 243, 191, 0.5);
+}
+
+div#turnDiv {
+  font: 600 2rem "Roboto", sans-serif;
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.image_hikes {
+  max-width: 55%;
+}
+
+.image_hikes > img {
+  max-width: 100%;
+}
+
+.main_hikes h1, .main_hikes h2 {
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  padding: 2rem;
+  background-color: #5e6a58;
+}
+
+.main_hikes h1 {
+  text-align: center;
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+.main_hikes h2 {
+  border-bottom: solid 1rem #9e391a;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.main_hikes h3 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.main_hikes li {
+  list-style: none;
+}
+
+#hikes > li > h2:hover {
+  background-color: rgba(6, 39, 6, 0.5);
+}
+
+.main_hikes p {
+  font-family: "Nunito", sans-serif;
+  font-weight: 200;
+  font-size: 1.5rem;
+}
+
+#hikes {
+  padding: 0;
+}
+
+.flexParent {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
+  display: flex;
+}
+
+.visible {
+  display: none;
+}
+
+.directions {
+  padding: 1rem;
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+}
+
+.toDoFlex {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  margin: 0;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.tasks {
+  border: solid 3px #000000;
+  padding: 1rem;
+}
+
+.lowerDiv {
+  padding-top: 2rem;
+}
+
+.middle_div {
+  max-width: 100%;
+  height: 45vh;
+  max-height: auto;
+  border: solid 3px #000000;
+}
+
+.task_input {
+  margin-bottom: 2rem;
+}
+
+.outSide {
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+}
+
+.addTask {
+  margin-right: 1rem;
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.taskList {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin: 0;
+  overflow: scroll;
+  height: 45vh;
+  max-height: auto;
+}
+
+li.addedTask {
+  list-style: none;
+  padding: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  background-color: #354536;
+  color: #ffffff;
+  margin-bottom: 5px;
 }
 
 /*# sourceMappingURL=styles.css.map */

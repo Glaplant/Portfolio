@@ -5,6 +5,8 @@ import{hikeList,imgBasePath} from './modules/hikes.js';
 
 
 
+
+
 window.addEventListener("load", () => {
   showHikeList();
 });
@@ -16,53 +18,58 @@ window.addEventListener("load", () => {
 
 function showHikeList() {
   const hikeListElement = document.querySelector("#hikes");
-  hikeListElement.innerHTML = "";
-  renderHikeList(hikeList, hikeListElement);
+  this.hikeListElement:hikeListElement.innerHTML = "";
+  //renderHikeList(hikeList, hikeListElement);
 }
 
 
 
-function renderHikeList(hikes, parent) {
-  hikes.forEach(hike => {
-    parent.appendChild(renderOneHike(hike));
-  });
-}
+// function renderHikeList(hikes) {
+//   hikes.forEach(hike => {
+//     hikeListElement.appendChild(renderOneHike(hike));
+//   });
+// }
 
 
 
-function renderOneHike(hike) {
+function renderOneHike(hikes) {
+
   const item = document.createElement("li");
 
-  item.innerHTML = ` <h2>${hike.name}</h2>
-  <div class=" toggle visible">
-    <div class="flexParent">
-        <div class="image_hikes">
-          <img src="${imgBasePath}${hike.imgSrc}" alt="${hike.imgAlt}">
-        </div>
-        <div>
-            <div>
-                <h3>Distance</h3>
-                <p>${hike.distance}</p>
-            </div>
-            <div>
-                <h3>Difficulty</h3>
-                <p>${hike.difficulty}</p>
-            </div>
-        </div>
-    </div>
-    <div class="directions">${hike.directions}</div>
-  </div>`;
+  hikes.forEach(hike => {
+    hikeListElement.appendChild(hike);
 
-  return item;
+  item.innerHTML =
+   ` <h2>${hike.name}</h2>
+      <div class=" toggle visible">
+        <div class="flexParent">
+          <div class="image_hikes">
+            <img src="${imgBasePath}${hike.imgSrc}" alt="${hike.imgAlt}">
+          </div>
+          <div>
+            <div>
+              <h3>Distance</h3>
+              <p>${hike.distance}</p>
+            </div>
+            <div>
+              <h3>Difficulty</h3>
+              <p>${hike.difficulty}</p>
+            </div>
+          </div>
+        </div>
+        <div class="directions">${hike.directions}</div>
+      </div>`;
+
+  //return item;
 }
 
 
 
 const ul = document.querySelector("ul");
-ul.addEventListener('click',test);
+ul.addEventListener('click',expand);
 
 //
-function test(event){
+function expand(event){
    const element = event.target.nextElementSibling;
   //const element = document.querySelector('.toggle');
   //const sibling = element.nextSibling;
