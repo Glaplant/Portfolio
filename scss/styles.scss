@@ -349,7 +349,7 @@ display:flex;
 
 .toDoFlex{
     display:flex;
-    justify-content:space-evenly;
+    justify-content:space-between;
     list-style: none;
     margin:0;
     margin-bottom:2rem;
@@ -359,13 +359,14 @@ display:flex;
 .tasks{
     border: solid 3px #000000;
     padding:1rem;
+    padding-bottom:0;
 }
 
 
-.lowerDiv{
+// .lowerDiv{
 
-padding-top:2rem;
-}
+// padding-top:2rem;
+// }
 
 .middle_div{
     max-width:100%;
@@ -380,10 +381,12 @@ margin-bottom:2rem;
 }
 
 .outSide{
-    max-width:50%;
+    max-width:40%;
     margin-left:auto;
     margin-right:auto;
-    margin-top:5rem;
+    margin-top:2rem;
+    margin-bottom:5rem;
+    box-shadow: 10px  20px  rgba(6, 39, 6, 0.5);
 }
 
 .addTask{
@@ -396,7 +399,6 @@ margin-bottom:2rem;
     display:flex;
     flex-direction: column;
     margin:0;
-
     padding:0;
     overflow-y:scroll;
     height:45vh;
@@ -407,15 +409,29 @@ margin-bottom:2rem;
 
 li.addedTask{
     list-style: none;
-    padding:1rem;
     font-family: fonts.$roboto;
     font-weight:700;
     font-size:2rem;
     background-color:colors.$dark_green;
     color:colors.$white;
     margin-bottom:5px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:1rem;
+    
     
 }
+
+.fas .fa-times{
+    
+    cursor:pointer;
+    color:colors.$white;
+    padding:4rem;
+}
+
+
+
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
@@ -434,3 +450,56 @@ li.addedTask{
   ::-webkit-scrollbar-track {
     background: #f1f1f1; 
   }
+
+  .sort>li{
+      color:colors.$dark_green;
+      padding:1rem 2rem;
+      font-family: fonts.$roboto;
+      font-weight:800;
+      font-size:1.5rem;
+  }
+
+  .sort>li:hover{
+      border:solid 3px colors.$dark_green;
+      background-color:colors.$light_blue;
+      color:colors.$white;
+      cursor:pointer;
+      border-bottom:none;
+      border-top:none;
+  }
+
+
+  .fa-plus-circle{
+      color:colors.$dark_green;
+      font-size:3rem;
+      cursor:pointer;
+      margin-bottom:1rem;
+      margin-right:1rem;
+  }
+
+.taskInput{
+    width:100%;
+    border: solid 2px colors.$dark_green;
+    font-size:2rem;
+    font-family:fonts.$nunito;
+    padding:1rem;
+}
+
+.sort{
+   margin:0;
+   padding:0;
+
+}
+
+.top_div{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content:space-between ;
+    align-content:space-between ;
+    margin-bottom:2rem;
+}
+
+.red{
+    background-color:colors.$red_brown !important;
+}

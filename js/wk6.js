@@ -29,6 +29,7 @@ const taskButton = new Button(".fa-plus-circle",createTask);
 //Makes Tasks Clickable
 const task = new Button(".taskList",toggle);
 const sort = new Button(".sort",storageObj);
+const x = new Button("fas-time",remove);
 
 
 function taskText(){
@@ -45,12 +46,12 @@ function testInput(task){
    //Tests for empty input
    if (!taskName){
      answer = false
-     const div = document.querySelector("main");
-     const h2 = document.createElement("h2");
-     h2.textContent= "Please Enter A Task.";
-     h2.classList.add("error");
+    //  const div = document.querySelector("main");
+    //  const h2 = document.createElement("h2");
+    //  h2.textContent= "Please Enter A Task.";
+    //  h2.classList.add("error");
 
-     div.appendChild(h2);
+    //  div.appendChild(h2);
      //console.log("empty");
    } 
 
@@ -93,20 +94,38 @@ function createTask(){
     function addDOM(taskName){
     const li = document.createElement("li");
     const div = document.querySelector("ul");
-    li.textContent= taskName ;
+    const iconX = document.createElement("i");
+    iconX.classList.add("fas","fa-times");
+    li.textContent= taskName;
     li.classList.add("addedTask");
+    li.appendChild(iconX);
     div.appendChild(li);
     }
 
 
 function toggle(event){
-
-const objName = event.target.innerHTML;
+const element = event.target.className;
+const objName = event.target.textContent;
 const taskObject = getObject(objName);
 taskObject.color = newColor(taskObject);
 taskObject.completed = completion(taskObject);
+let color = taskObject.color;
+if(color == "red"){
+  event.target.classList.toggle("red");
+}
 localStorage.setItem(objName,JSON.stringify(taskObject));
 }
+
+
+
+// function redToggle(element){
+  
+//   // console.log(element);
+// const task = document.querySelector(element);
+//  task.classList.toggle("red");
+// }
+
+
 
 
 
@@ -140,6 +159,11 @@ function storageObj(event){
   }
 
 
+}
+
+function remove(event){
+  let element = event.target;
+  element.remove();
 }
 
 function removeAllChildNodes(parent) {

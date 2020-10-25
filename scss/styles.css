@@ -6537,9 +6537,9 @@ div#turnDiv {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   list-style: none;
   margin: 0;
   margin-bottom: 2rem;
@@ -6550,10 +6550,7 @@ div#turnDiv {
 .tasks {
   border: solid 3px #000000;
   padding: 1rem;
-}
-
-.lowerDiv {
-  padding-top: 2rem;
+  padding-bottom: 0;
 }
 
 .middle_div {
@@ -6568,10 +6565,13 @@ div#turnDiv {
 }
 
 .outSide {
-  max-width: 50%;
+  max-width: 40%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5rem;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  -webkit-box-shadow: 10px 20px rgba(6, 39, 6, 0.5);
+          box-shadow: 10px 20px rgba(6, 39, 6, 0.5);
 }
 
 .addTask {
@@ -6597,13 +6597,29 @@ div#turnDiv {
 
 li.addedTask {
   list-style: none;
-  padding: 1rem;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 2rem;
   background-color: #354536;
   color: #ffffff;
   margin-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+}
+
+.fas .fa-times {
+  cursor: pointer;
+  color: #ffffff;
+  padding: 4rem;
 }
 
 /* Handle */
@@ -6624,5 +6640,65 @@ li.addedTask {
 /* Track */
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
+}
+
+.sort > li {
+  color: #354536;
+  padding: 1rem 2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.sort > li:hover {
+  border: solid 3px #354536;
+  background-color: #5e6a58;
+  color: #ffffff;
+  cursor: pointer;
+  border-bottom: none;
+  border-top: none;
+}
+
+.fa-plus-circle {
+  color: #354536;
+  font-size: 3rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+
+.taskInput {
+  width: 100%;
+  border: solid 2px #354536;
+  font-size: 2rem;
+  font-family: "Nunito", sans-serif;
+  padding: 1rem;
+}
+
+.sort {
+  margin: 0;
+  padding: 0;
+}
+
+.top_div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.red {
+  background-color: #9e391a !important;
 }
 /*# sourceMappingURL=styles.css.map */
