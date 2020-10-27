@@ -2,7 +2,7 @@
 
 
 const hikeList = [
-    {
+      {
       name: "Bechler Falls",
       imgSrc: "falls.jpg",
       imgAlt: "Image of Bechler Falls",
@@ -13,7 +13,7 @@ const hikeList = [
       directions:
         "Take Highway 20 north to Ashton. Turn right into the town and continue through. Follow that road for a few miles then turn left again onto the Cave Falls road.Drive to the end of the Cave Falls road. There is a parking area at the trailhead."
     },
-    {
+     {
       name: "Teton Canyon",
       imgSrc: "falls.jpg",
       imgAlt: "Image of Bechler Falls",
@@ -40,5 +40,31 @@ const hikeList = [
   const imgBasePath = "//byui-cit.github.io/cit261/examples/";
 //on load grab the array and insert it into the page
 
+function hikeDom(hike){
 
-  export {hikeList,imgBasePath};
+let hikeHtml =
+` <h2>${hike.name}</h2>
+   <div class=" toggle visible">
+     <div class="flexParent">
+       <div class="image_hikes">
+         <img src="${imgBasePath}${hike.imgSrc}" alt="${hike.imgAlt}">
+       </div>
+       <div>
+         <div>
+           <h3>Distance</h3>
+           <p>${hike.distance}</p>
+         </div>
+         <div>
+           <h3>Difficulty</h3>
+           <p>${hike.difficulty}</p>
+         </div>
+       </div>
+     </div>
+     <div class="directions">${hike.directions}</div>
+   </div>`;
+
+   return hikeHtml;
+}
+
+
+  export {hikeList,imgBasePath, hikeDom};

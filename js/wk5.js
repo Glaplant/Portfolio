@@ -1,66 +1,34 @@
 
 
-import{hikeList,imgBasePath} from './modules/hikes.js';
+import{hikeList,imgBasePath,hikeDom} from './modules/hikes.js';
 
 
-
-
-
+// const ulParent () {
 
 window.addEventListener("load", () => {
   showHikeList();
 });
 
-
-
-
-
-
+  
 function showHikeList() {
-  const hikeListElement = document.querySelector("#hikes");
-  this.hikeListElement:hikeListElement.innerHTML = "";
-  //renderHikeList(hikeList, hikeListElement);
+  const hikeListElement = document.getElementById("hikes");
+  hikeListElement.innerHTML = "";
+  renderHikeList(hikeList, hikeListElement);
+}
+
+function renderHikeList(hikes, parent) {
+  hikes.forEach(hike => {
+    parent.appendChild(renderOneHike(hike));
+  });
 }
 
 
-
-// function renderHikeList(hikes) {
-//   hikes.forEach(hike => {
-//     hikeListElement.appendChild(renderOneHike(hike));
-//   });
-// }
-
-
-
-function renderOneHike(hikes) {
-
+function renderOneHike(hike) {
   const item = document.createElement("li");
 
-  hikes.forEach(hike => {
-    hikeListElement.appendChild(hike);
+  item.innerHTML = hikeDom(hike);
 
-  item.innerHTML =
-   ` <h2>${hike.name}</h2>
-      <div class=" toggle visible">
-        <div class="flexParent">
-          <div class="image_hikes">
-            <img src="${imgBasePath}${hike.imgSrc}" alt="${hike.imgAlt}">
-          </div>
-          <div>
-            <div>
-              <h3>Distance</h3>
-              <p>${hike.distance}</p>
-            </div>
-            <div>
-              <h3>Difficulty</h3>
-              <p>${hike.difficulty}</p>
-            </div>
-          </div>
-        </div>
-        <div class="directions">${hike.directions}</div>
-      </div>`;
-
-  //return item;
+  return item;
 }
 
 

@@ -28,6 +28,9 @@ return color;
 
 
 
+
+
+
 function completion(taskObject){
   let complete = taskObject.completed;
   if(complete === "no"){
@@ -59,8 +62,6 @@ function getStorage(){
 }
 
 // console.log(getStorage());
-
- 
 
    
 
