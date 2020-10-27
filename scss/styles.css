@@ -6461,7 +6461,7 @@ div#turnDiv {
 }
 
 .image_hikes {
-  max-width: 55%;
+  max-width: 100%;
 }
 
 .image_hikes > img {
@@ -6495,6 +6495,7 @@ div#turnDiv {
 
 .main_hikes li {
   list-style: none;
+  width: 30%;
 }
 
 #hikes > li > h2:hover {
@@ -6521,6 +6522,10 @@ div#turnDiv {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .visible {
@@ -6700,5 +6705,37 @@ li.addedTask {
 
 .red {
   background-color: #9e391a !important;
+}
+
+.hikesFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: space-evenly;
+      align-content: space-evenly;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.flexRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 /*# sourceMappingURL=styles.css.map */

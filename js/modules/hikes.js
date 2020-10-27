@@ -49,8 +49,8 @@ let hikeHtml =
        <div class="image_hikes">
          <img src="${imgBasePath}${hike.imgSrc}" alt="${hike.imgAlt}">
        </div>
-       <div>
-         <div>
+       <div class="flexRow">
+         <div >
            <h3>Distance</h3>
            <p>${hike.distance}</p>
          </div>
