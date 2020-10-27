@@ -1,0 +1,524 @@
+
+@use "partials/_colors";
+@use "partials/_fonts";
+@use "partials/_buttons";
+@use "partials/_links";
+@use "partials/_sidebar";
+@use "partials/_notes";
+@use "partials/_main_flex";
+@import "scss/fontawesome.scss";
+@import "scss/solid.scss";
+@import "scss/brands.scss";
+@import "scss/regular.scss";
+
+/*run in terminal to auto compile sass*/
+/*sass --watch styles.scss:../css/styles.css*/
+
+
+body{
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main{
+    padding:0;
+    margin:0;
+   
+
+}
+
+main>h2{
+    font: 700 2rem fonts.$nunito;
+    color:colors.$dark_green;
+    margin-bottom:.5rem;
+
+}
+
+
+.book_examples{
+    font-family:fonts.$nunito ;
+    font-size:2.5rem;
+    font-weight:900;
+    color:colors.$dark_green;
+    
+    
+}
+
+h2.book_examples, h3.book_examples{
+    margin:0;
+}
+
+
+.header_bg{
+    background-color:colors.$red_brown;
+}
+
+header>h1{
+    font-family:fonts.$roboto;
+    font-weight:900;
+    font-size:3em;
+    color:colors.$white;
+}
+
+
+.fas.fa-user-ninja, .fas.fa-book-reader{
+   padding: 0rem 2rem;
+
+
+}
+
+.rainbow{
+    width:100%;
+    height:100vh;
+}
+
+
+/*quiz ninja*/
+
+.quizBody{
+    background: colors.$bodyBG;
+    font-family: fonts.$roboto;
+    }
+
+
+    .dojo{
+    background: url(https://cdn.rawgit.com/alexmwalker/6acbe9040d9fe6e5e9fd758a25e1b2a5/raw/9c8131eb2ccc1e3839a5a5114cb16b5dc74daf04/dojo.svg) no-repeat;
+    width: 100%;
+
+
+height: 800px;
+background-size: 100% auto;
+padding-top: 10px;
+}
+
+
+.quiz-body{
+background: colors.$background;
+margin: 150px 33%;
+padding: 10px 20px 50px 20px;
+-webkit-box-shadow: 4px 4px 11px 3px colors.$boxShadow;
+-moz-box-shadow: 4px 4px 11px 3px colors.$boxShadow;
+box-shadow: 4px 4px 11px 3px colors.$boxShadow;
+}
+
+
+.quizH1{
+color: colors.$h1;
+font-family: fonts.$balooDa;
+font-weight: 900;
+text-align: center;
+font-size: 48px;
+margin: 0;
+}
+
+
+.quizButton {
+color: colors.$buttonColor;
+background-color: colors.$buttonBg;
+border-color:colors.$buttonBorder;
+border-radius: 4px;
+margin: 0.2em 0;
+display: block;
+width: 100%;
+font-size: 24px;
+}
+
+
+#quizQuestion {
+font-size: 24px;
+}
+
+
+#quizResult{
+color: colors.$result;
+margin: 0.2em 0;
+width: 100%;
+text-align: center;
+}
+
+
+.quizCorrect {
+    background-color:colors.$correct;
+    }
+
+
+    .quizWrong {
+    color:colors.$wrong;
+    background-color:colors.$wrongBg;
+    }
+
+.hide{
+    display:none;
+}
+
+.ticTacToe {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+    width:30%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+.tic_tac_header {
+    display:block;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    font : 900 5rem fonts.$roboto;
+    color:colors.$dark_green
+}
+
+h2.tic_tac_header{
+    display:block;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    font : 200 3rem fonts.$roboto;
+    margin-bottom:2rem;
+    color:colors.$dark_green
+
+}
+
+
+.ticTacToe > div {
+    background-color:rgb(191, 243, 191);
+    border: 1px solid;
+    text-align: center;
+    font-size: 2em;
+    padding:.5rem;
+}
+
+
+$topLeft:".ticTacToe > div:nth-Child(1)";
+$topCenter:".ticTacToe > div:nth-Child(2)";
+$topRight:".ticTacToe > div:nth-Child(3)";
+$middleLeft:".ticTacToe > div:nth-Child(4)";
+$middleCenter:".ticTacToe > div:nth-Child(5)";
+$middleRight:".ticTacToe > div:nth-Child(6)";
+$bottomLeft:".ticTacToe > div:nth-Child(7)";
+$bottomCenter:".ticTacToe > div:nth-Child(8)";
+$bottomRight:".ticTacToe > div:nth-Child(9)";
+#{$topLeft} {
+    border:none;
+    padding:2rem;
+ }
+#{$topCenter} {
+    border-left:solid 3px;
+    border-bottom:none;
+    border-right:solid 3px;
+    border-top:none;
+    padding:2rem;
+ }
+ #{$topRight} {
+    border:none;
+    padding:2rem;
+ }
+
+ #{$middleLeft} {
+    border-top:solid 3px;
+    border-bottom:solid 3px;
+    border-left:none;
+    border-right:none;
+    padding:2rem;
+ }
+
+ #{$middleCenter} {
+    border:solid 3px;
+    padding:2rem;
+ }
+
+
+ #{$middleRight} {
+    border-bottom:solid 3px;
+    border-top:solid 3px;
+    border-right:none;
+    border-left:none;
+    padding:2rem;
+ }
+ #{$bottomLeft} {
+    border:none;
+    padding:2rem;
+ }
+ #{$bottomCenter} {
+    border-right:solid 3px;
+    border-left:solid 3px;
+    border-bottom:none;
+    border-top:none;
+    padding:2rem;
+
+ }
+ #{$bottomRight} {
+    border:none;
+    padding:2rem;
+ }
+
+.ticTacToe > div:hover {
+    background-color:rgba(191, 243, 191, 0.5);
+
+}
+
+div#turnDiv{
+    font : 600 2rem fonts.$roboto;
+    text-align: center;
+    margin-top:2rem;
+    padding:1rem;
+}
+
+
+
+.image_hikes{
+    max-width:100%;
+}
+
+.image_hikes>img{
+   max-width:100%;
+}
+
+.main_hikes h1, .main_hikes h2{
+font-family:fonts.$roboto;
+color:colors.$white;
+padding:2rem;
+background-color: colors.$light_blue;
+
+}
+
+.main_hikes h1{
+    text-align:center;
+    font-weight:900;
+    font-size: 3rem;
+}
+
+.main_hikes h2{
+
+    border-bottom: solid 1rem colors.$red_brown;
+    font-weight:600;
+    font-size: 2rem;
+}
+
+
+.main_hikes h3{
+    font-family: fonts.$nunito;
+    font-weight:600;
+    font-size: 1.5rem;
+}
+
+.main_hikes li{
+    list-style: none;
+    width:25%;
+    height:auto;
+
+}
+
+#hikes>li>h2:hover{
+    background-color:rgba(6, 39, 6, 0.5);
+
+}
+
+.main_hikes p{
+    font-family: fonts.$nunito;
+    font-weight:200;
+    font-size: 1.5rem;
+
+}
+
+#hikes{
+    padding:0;
+}
+
+.flexParent{
+flex-wrap: wrap;
+justify-content: space-evenly;
+margin-bottom:1rem;
+display:flex;
+flex-direction: column;
+
+}
+
+.visible{
+    display:none;
+
+}
+
+.directions{
+    padding:1rem;
+    font-family:fonts.$nunito;
+    font-size:1rem;
+
+}
+
+.toDoFlex{
+    display:flex;
+    justify-content:space-between;
+    list-style: none;
+    margin:0;
+    margin-bottom:2rem;
+    flex-wrap:wrap;
+}
+
+.tasks{
+    border: solid 3px #000000;
+    padding:1rem;
+    padding-bottom:0;
+}
+
+
+// .lowerDiv{
+
+// padding-top:2rem;
+// }
+
+.middle_div{
+    max-width:100%;
+    height:45vh;
+    max-height:auto;
+    border:solid 3px #000000;
+   
+}
+
+.task_input{
+margin-bottom:2rem;
+}
+
+.outSide{
+    max-width:40%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:2rem;
+    margin-bottom:5rem;
+    box-shadow: 10px  20px  rgba(6, 39, 6, 0.5);
+}
+
+.addTask{
+    margin-right:1rem;
+    font-weight: 900;
+    font-size:2rem;
+}
+
+.taskList{
+    display:flex;
+    flex-direction: column;
+    margin:0;
+    padding:0;
+    overflow-y:scroll;
+    height:45vh;
+    max-height:auto;
+  
+
+}
+
+li.addedTask{
+    list-style: none;
+    font-family: fonts.$roboto;
+    font-weight:700;
+    font-size:2rem;
+    background-color:colors.$dark_green;
+    color:colors.$white;
+    margin-bottom:5px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:1rem;
+    
+    
+}
+
+.fas .fa-times{
+    
+    cursor:pointer;
+    color:colors.$white;
+    padding:4rem;
+}
+
+
+
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }/* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+
+  .sort>li{
+      color:colors.$dark_green;
+      padding:1rem 2rem;
+      font-family: fonts.$roboto;
+      font-weight:800;
+      font-size:1.5rem;
+  }
+
+  .sort>li:hover{
+      border:solid 3px colors.$dark_green;
+      background-color:colors.$light_blue;
+      color:colors.$white;
+      cursor:pointer;
+      border-bottom:none;
+      border-top:none;
+  }
+
+
+  .fa-plus-circle{
+      color:colors.$dark_green;
+      font-size:3rem;
+      cursor:pointer;
+      margin-bottom:1rem;
+      margin-right:1rem;
+  }
+
+.taskInput{
+    width:100%;
+    border: solid 2px colors.$dark_green;
+    font-size:2rem;
+    font-family:fonts.$nunito;
+    padding:1rem;
+}
+
+.sort{
+   margin:0;
+   padding:0;
+
+}
+
+.top_div{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content:space-between ;
+    align-content:space-between ;
+    margin-bottom:2rem;
+}
+
+.red{
+    background-color:colors.$red_brown !important;
+}
+
+.hikesFlex{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.flexRow{
+    display:flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   justify-content:space-evenly;
+}
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/node_modules/normalize.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <title>Story Writer</title>
+</head>
+<body>
+<script src="../js/story_editor.js"></script>
+    
+
+<header class="header_bg">
+    <h1 class="main_links header_bg header_links"><a href= ../../index.html>Portfolio WDD330</a>  |  <a href=wk01.html>Week 1</a> | 2.3 <i class="fas fa-book-reader"></i></h1>
+</header>   
+<main>
+
+    <h2>Story Editor</h2>
+    Story Name:<input id=name_input></input>
+    <div>
+        <button class="button_styles" onclick="loadStory()">Load</button>
+        <button class="button_styles" onclick="saveStory()">Save</button>
+        <button class="button_styles" onclick="displayStory()">Display</button>
+    </div>
+   <div class="sizing">
+    <textarea id="story_editor" placeholder="Write a totally awesome story here!"></textarea>
+   </div>
+    <div class ="notes " id="story_display" style= "display: none"></div>
+</main>
+</body>
+</html>
