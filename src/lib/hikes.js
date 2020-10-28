@@ -70,7 +70,7 @@ div3.classList.add("imageHikes");
 
 const img = document.createElement("img");
 
-img.src = imgBasePath + hike.imgSrc;
+img.src = `${imgBasePath}${hike.imgSrc}`;
 img.alt = hike.imgAlt ;
 
 const div4 = document.createElement("div");
