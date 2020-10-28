@@ -1,7 +1,6 @@
 
 
-import{hikeList,imgBasePath,hikeDom} from '../lib/hikes.js';
-
+import{hikeList,hikeDom} from '../lib/hikes.js';
 
 // const ulParent () {
 
@@ -17,32 +16,16 @@ function showHikeList() {
 }
 
 function renderHikeList(hikes, parent) {
-  hikes.forEach(hike => {
-    parent.appendChild(renderOneHike(hike));
-  });
+  
+  hikeDom(hikes,parent);
+  const ul = document.querySelector("ul");
+  ul.addEventListener('click',expand);
 }
 
-
-function renderOneHike(hike) {
-  const item = document.createElement("li");
-
-  item.innerHTML = hikeDom(hike);
-
-  return item;
-}
-
-
-
-const ul = document.querySelector("ul");
-ul.addEventListener('click',expand);
-
-//
 function expand(event){
-   const element = event.target.nextElementSibling;
-  //const element = document.querySelector('.toggle');
-  //const sibling = element.nextSibling;
- element.classList.toggle("visible");
-// event.target.nextSibling.classList.toggle("visible");
-  console.log(element);
+    const element = event.target.nextElementSibling;
+    console.log(element);
+    element.classList.toggle("visible");
+
   }
 
