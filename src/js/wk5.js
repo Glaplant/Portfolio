@@ -1,7 +1,8 @@
 
-
+import{dateNew} from '../lib/comments.js';
 import{hikeList,hikeDom} from '../lib/hikes.js';
 
+console.log(dateNew());
 // const ulParent () {
 
 window.addEventListener("load", () => {

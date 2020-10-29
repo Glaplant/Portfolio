@@ -1,3 +1,13 @@
+let hikeRequest = new XMLHttpRequest();
+let hikeUrlString = "https://glaplant.github.io/Portfolio/src/lib/hikes.json";
+hikeRequest.open('GET',hikeUrlString, true);
+hikeRequest.send();
+
+
+hikeRequest.onload = function(){
+  let hikeList = JSON.parse(hikeRequest.responseText);
+  console.log(hikeList);
+}
 
 
 
