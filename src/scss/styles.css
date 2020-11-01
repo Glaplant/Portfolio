@@ -6461,7 +6461,7 @@ div#turnDiv {
 }
 
 .imageHikes {
-  max-width: 100%;
+  max-width: 30%;
 }
 
 .imageHikes > img {
@@ -6495,7 +6495,7 @@ div#turnDiv {
 
 .main_hikes li {
   list-style: none;
-  width: 25%;
+  width: 100%;
   height: auto;
 }
 
@@ -6514,19 +6514,16 @@ div#turnDiv {
 }
 
 .flexParent {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   margin-bottom: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .visible {
@@ -6733,10 +6730,11 @@ li.addedTask {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stopEvent {
+  margin-right: 6rem;
 }
 /*# sourceMappingURL=styles.css.map */

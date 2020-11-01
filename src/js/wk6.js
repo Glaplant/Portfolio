@@ -46,13 +46,7 @@ function testInput(task){
    //Tests for empty input
    if (!taskName){
      answer = false
-    //  const div = document.querySelector("main");
-    //  const h2 = document.createElement("h2");
-    //  h2.textContent= "Please Enter A Task.";
-    //  h2.classList.add("error");
 
-    //  div.appendChild(h2);
-     //console.log("empty");
    } 
 
  return answer;
@@ -65,10 +59,10 @@ function createTask(){
     const test = testInput(taskName);
  
 
-      const errorHtml = document.querySelector(".error");
-      if (!errorHtml == null){
-        errorHtml.remove();
-      }
+      // const errorHtml = document.querySelector(".error");
+      // if (!errorHtml == null){
+      //   errorHtml.remove();
+      // }
 
       const task = taskObj(taskName);
       if(test){addLocal(task)};

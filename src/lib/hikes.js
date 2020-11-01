@@ -1,60 +1,33 @@
-let hikeRequest = new XMLHttpRequest();
-let hikeUrlString = "https://glaplant.github.io/Portfolio/src/lib/hikes.json";
-hikeRequest.open('GET',hikeUrlString, true);
-hikeRequest.send();
+"use strict";
 
 
-hikeRequest.onload = function(){
-  let hikeList = JSON.parse(hikeRequest.responseText);
-  console.log(hikeList);
-}
+let hikeData = ("https://glaplant.github.io/Portfolio/src/lib/hikes.json");
 
 
 
-const hikeList = [
-      {
-      name: "Bechler Falls",
-      imgSrc: "falls.jpg",
-      imgAlt: "Image of Bechler Falls",
-      distance: "3 miles",
-      difficulty: "Easy",
-      description:
-        "Beautiful short hike along the Bechler river to Bechler Falls",
-      directions:
-        "Take Highway 20 north to Ashton. Turn right into the town and continue through. Follow that road for a few miles then turn left again onto the Cave Falls road.Drive to the end of the Cave Falls road. There is a parking area at the trailhead."
-    },
-     {
-      name: "Teton Canyon",
-      imgSrc: "falls.jpg",
-      imgAlt: "Image of Bechler Falls",
-      distance: "3 miles",
-      difficulty: "Easy",
-      description: "Beautiful short (or long) hike through Teton Canyon.",
-      directions:
-        "Take Highway 33 East to Driggs. Turn left onto Teton Canyon Road. Follow that road for a few miles then turn right onto Staline Raod for a short distance, then left onto Alta Road. Veer right after Alta back onto Teton Canyon Road. There is a parking area at the trailhead."
-    },
-    {
-      name: "Dunanda Falls",
-      imgSrc: "falls.jpg",
-      imgAlt: "Image of Bechler Falls",
-      distance: "7 miles",
-      difficulty: "Moderate",
-      description:
-        "Beautiful hike through Bechler meadows river to Denanda Falls",
-      directions:
-        "Take Highway 20 north to Ashton. Turn right into the town and continue through. Follow that road for a few miles then turn left again onto the Cave Falls road. Drive to until you see the sign for Bechler Meadows on the left. Turn there. There is a parking area at the trailhead."
-    }
-  ];
+fetch(hikeData)
+// console.log(hikeData)
+.then(function(resp){
+  return resp.json();
+})
+.then(function(data){
+
+  const hikes = data.hikes;
+  hikeDom(hikes);
+})
+ 
   
 
   
 //on load grab the array and insert it into the page
 
-function hikeDom(hikes,parent){
-
+function hikeDom(hikes){
+  const parent = document.getElementById("hikes");
+  parent.innerHTML = "";
   hikes.forEach(hike => {
-    //   parent.appendChild(li);
-  
+
+     
+
 
 const imgBasePath = "//byui-cit.github.io/cit261/examples/";
 // const hikeHtml =
@@ -65,8 +38,9 @@ const h2 = document.createElement("h2");
 
 
 const a = document.createElement("a");
-a.href="#focus";
+// a.href="#focus";
 a.textContent= hike.name;
+
 
 
 const div1 = document.createElement("div");
@@ -114,6 +88,10 @@ div7.textContent = hike.directions;
 div7.classList.add("directions");
 
 
+const comments = document.createElement("div");
+comments.setAttribute("id","commentContainer");
+
+
 parent.appendChild(li);
 li.appendChild(h2);
 h2.appendChild(a);
@@ -129,8 +107,13 @@ div1.appendChild(div2);
         div6.appendChild(difficulty);
         div6.appendChild(p2);
 div1.appendChild(div7);
+div1.appendChild(comments);
 
-})};
+});
+}
+
+  export {hikeDom};
 
 
-  export {hikeList, hikeDom};
+
+  

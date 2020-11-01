@@ -6433,7 +6433,7 @@ div#turnDiv {
 }
 
 .imageHikes {
-  max-width: 100%;
+  max-width: 30%;
 }
 
 .imageHikes > img {
@@ -6467,7 +6467,7 @@ div#turnDiv {
 
 .main_hikes li {
   list-style: none;
-  width: 25%;
+  width: 100%;
   height: auto;
 }
 
@@ -6486,11 +6486,10 @@ div#turnDiv {
 }
 
 .flexParent {
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  flex-wrap: nowrap;
   margin-bottom: 1rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .visible {
@@ -6656,8 +6655,12 @@ li.addedTask {
 .flexRow {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-evenly;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stopEvent {
+  margin-right: 6rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
