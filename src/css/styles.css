@@ -6663,4 +6663,11 @@ li.addedTask {
   margin-right: 6rem;
 }
 
+.hikeFooter {
+  max-width: 100%;
+  margin-top: 3rem;
+  height: 10rem;
+  background-color: #354536;
+}
+
 /*# sourceMappingURL=styles.css.map */
