@@ -35,12 +35,8 @@ const imgBasePath = "//byui-cit.github.io/cit261/examples/";
 const li = document.createElement("li");
 
 const h2 = document.createElement("h2");
-
-
-const a = document.createElement("a");
-// a.href="#focus";
-a.textContent= hike.name;
-
+h2.classList.add("eventClick");
+h2.textContent= hike.name;
 
 
 const div1 = document.createElement("div");
@@ -94,7 +90,6 @@ comments.setAttribute("id","commentContainer");
 
 parent.appendChild(li);
 li.appendChild(h2);
-h2.appendChild(a);
 li.appendChild(div1);
 div1.appendChild(div2);
   div2.appendChild(div3);
