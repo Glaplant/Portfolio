@@ -14,6 +14,10 @@
 /*run in terminal to auto compile sass*/
 /*sass --watch styles.scss:../css/styles.css*/
 
+html,body{
+    height:100%;
+}
+
 
 body{
     width:80%;
@@ -531,4 +535,81 @@ li.addedTask{
     margin-top:3rem;
     height:10rem;
     background-color: colors.$dark_green;
+}
+
+
+#controls, #pages{
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    
+    
+   
+}
+
+#controls>i{
+    color:colors.$sw_blue;
+    padding-top:10px;
+    padding-bottom:10px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
+#pages{
+
+    justify-content:space-around;
+    margin:0;
+}
+
+#pages li{
+    padding:.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color:colors.$sw_yellow;
+    font-family: fonts.$roboto;
+    
+}
+
+
+#swAPI{
+    display:grid;
+    grid-gap:2rem 2rem ;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width:50rem;
+    height:30rem;
+    padding:2rem;
+    box-shadow: 2px 3px 25px colors.$swboxShadow;
+    margin-top:2rem;
+    margin-bottom:3rem;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: colors.$white;
+}
+
+.bgImg{
+    width:100%;
+    background-image: url(../images/battle.jpg);
+    background-repeat: no-repeat;
+    background-size: cover ;
+    background-position: center center;
+}
+
+
+.child{
+    text-align: center;
+    border: 5px solid colors.$sw_blue ;
+    max-height:74px;
+    
+}
+
+.people{
+    background-color: colors.$white;
+    padding:.5rem;
+}
+
+.wrapper{
+    width:100vw;
+    height:100vh;
+    padding-bottom:20rem;
 }
