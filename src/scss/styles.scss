@@ -547,6 +547,10 @@ li.addedTask{
    
 }
 
+#controls{
+    padding:2rem;
+}
+
 #controls>i{
     color:colors.$sw_blue;
     padding-top:10px;
@@ -574,25 +578,26 @@ li.addedTask{
 
 #swAPI{
     display:grid;
-    grid-gap:2rem 2rem ;
+    grid-gap:1rem 1rem ;
     grid-template-columns: 1fr 1fr 1fr;
     max-width:50rem;
     height:30rem;
     padding:2rem;
     box-shadow: 2px 3px 25px colors.$swboxShadow;
     margin-top:2rem;
-    margin-bottom:3rem;
     margin-left:auto;
     margin-right:auto;
     background-color: colors.$white;
 }
 
 .bgImg{
-    width:100%;
+    
     background-image: url(../images/battle.jpg);
     background-repeat: no-repeat;
     background-size: cover ;
     background-position: center center;
+    padding:3rem;
+    
 }
 
 
@@ -608,8 +613,3 @@ li.addedTask{
     padding:.5rem;
 }
 
-.wrapper{
-    width:100vw;
-    height:100vh;
-    padding-bottom:20rem;
-}
