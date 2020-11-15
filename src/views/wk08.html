@@ -6,14 +6,14 @@
     <link rel="stylesheet" href="../css/node_modules/normalize.css">
     <link rel="stylesheet" href="../css/styles.css">
    
-    <title>Portfolio|Week 1</title>
+    <title>Portfolio|Week 8</title>
 </head>
 <body>
    
     
 
 <header class="header_bg">
-    <h1 class="main_links header_bg header_links"><a href= ../index.html>Portfolio WDD330 | Week 8</a></h1>
+    <h1 class="main_links header_bg header_links"><a href= ../../index.html>Portfolio WDD330 | Week 8</a></h1>
    
 </header>  
 
@@ -41,11 +41,20 @@
 <!--notes--->
 <article class="notes">
     <h3>CH8 HTML &amp; CSS for the Real World</h3>
+    <h2>Transforms</h2>
+    <ul>
+        <li>Translation</li>
+        <li>Scaling</li>
+        <li>Rotation</li>
+        <li>Skew</li>
+        <li>Transform-origin</li>
+    </ul>
     <p>Translation is similar to position relative. Translate(x,y); translatex; translatey;</p>
     <p>Scaling: scale(x,y); x horizontal scale; y vertical scale; scalex; scaley; Default origin point is the center.</p>
     <p>Rotation: rotate(x deg ); Default origin point is the center.</p>
     <p> Skew: skew(xdeg,ydeg); Skews along x and y axis; skewx(); skewy(); If second parameter is omitted, it will only skew the xaxis; Default origin point is the center.</p>
     <p>Transform-origin; defaults to center; transform-origin: 0 0;</p>
+    <h2>Transitions</h2>
     <p>Transitions; Allows values to change over time</p>
     <ul>
         <li>Step 1: Declare original state.</li>
@@ -55,12 +64,60 @@
             <li>transition-property</li>
             <li>transition-duration</li>
             <li>transition-timing-function</li>
+            <ul>
+                <li>ease</li>
+                <li>linear</li>
+                <li>ease-in</li>
+                <li>ease-out</li>
+                <li>ease-in-out</li>
+                <li>cubic-bezier</li>
+        
+            </ul>
             <li>transition-delay</li>
         </ul>
     </ul>
+    <p>Transition shorthand;The transition property is shorthand for the four transition functions. transition: value 1 value 2 value 3 value 4; </p>
+        <ul>
+            <li>Value 1: transition-property</li>
+            <li>Value 2: transition-duration</li>
+            <li>Value 3: transition-timing-function</li>
+            <li>Value 4: transition-delay</li>
+        </ul>
+        <p>Multiple Transitions;<br> transition-property: transform, color;<br> shorthand;<br> transition: color 0.2s ease-out, transform 0.2s ease-out</p>
+<h2>Animations</h2>
+<p>@keyframes followed by 'nameofAnimation'{code block}</p>
+<p>The percentage value, rather than the order of the declerations, that determine the sequence of keyframes in the animation.</p>
+<p>Instead of a selector use from and to; percentage value; or a comma seperated list of percentages</p>
+<h3>Animation Properties</h3>
+<ul>
+    <li>animation-name</li>
+    <li>animation-duration</li>
+    <li>animation-timing-function</li>
+    <ul>
+        <li>ease</li>
+        <li>linear</li>
+        <li>ease-in</li>
+        <li>ease-out</li>
+        <li>ease-in-out</li>
+        <li>cubic-bezier</li>
 
+    </ul>
+    <li>animation-iteration-count</li>
+    <li>animation-direction</li>
+    <li>animation-delay</li>
+    <li>animation-fill-mode</li>
+    <li>animation-play-state</li>
+</ul>
+<p>Shorthand; animation: "name" "duration" "timing" "iteration" "direction" "delay" "fill-mode";</p>
+<h2>CH11 HTML &amp; CSS for the Real World</h2>
+<ul>
+    <li>Canvas</li>
+    <li>SVG</li>
+    <li>Drag</li>
+    <li>Drop</li>
 
-
+    <p>Canvas html<code>&lt;canvas id="myCanvas" &gt;&lt;canvas&gt;</code></p>
+   <p>Canvas should have a width and height set and some kind of border in order to see where the canvas is.</p>
 </article>
 <aside class="sidebar right_sidebar">
     <h2 class="book_examples">Properties you can transition</h2>
@@ -88,6 +145,7 @@
 
        
     </ul>
+  
 </aside>
 </main>
 <footer class="hikeFooter">
