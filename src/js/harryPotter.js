@@ -5,15 +5,20 @@
 
 
 
-async function harryPotter(data){
-    const key = "?key=$2a$10$XPr0ZSeNMXTM3piVDGzsZuEiEc1xvzjse1VfNhgkNAZK4OMAwEoMG";
-    const url ="https://www.potterapi.com/v1/"
-    const route = data;
-    const fetchUrl = url + route + key;
-    const response = await fetch( fetchUrl );
+async function harryPotter(data,url="https://cors-anywhere.herokuapp.com/https://www.potterapi.com/v1/"){
+  const token = "$2a$10$XPr0ZSeNMXTM3piVDGzsZuEiEc1xvzjse1VfNhgkNAZK4OMAwEoMG";
+   //const url ="http://hp-api.herokuapp.com/api/";
+   // const url = 
+   //const fetchUrl =url+data;
+  // const header = Headers.append(Access-Control-Allow-Origin:*);
+   const fetchUrl = `${url + data}?key=${token}`;
+    console.log(fetchUrl);
+    const response = await fetch(fetchUrl);
+    console.log(response);
     const magic = await response.json();
+
     console.log(magic);
-    return magic;
+    //return magic;
 }
 
 
@@ -22,5 +27,9 @@ function controller(){
     harryPotter(data);
 }
 
+function errorHandler(err){
+    console.log(err);
+    
+}
 
 controller();

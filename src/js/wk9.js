@@ -55,6 +55,3 @@ function play(event){
        }
       );
     }
-
-
-document.querySelector
