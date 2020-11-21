@@ -24,13 +24,13 @@
 <ul>
     <!--Section2.1 Example-->
     <li>
-        <a class="section_links" href="#">2.1-2.2 
+        <a class="section_links" href="teamwk10.html">Team 
 
         </a>
     </li>
     <!--Section2.3 Example-->
     <li>
-        <a class="section_links" href="#">2.3 
+        <a class="section_links" href="#">TBD 
             
         </a>
     </li>
@@ -40,10 +40,52 @@
 
 <!--notes--->
 <article class="notes">
-    <h3>Notes</h3>
-    <p>
-    </p>
-</article>
+        <h2>Notes</h2>
+        <h2>Form Validation</h2>
+        <p>Validation done in the browser is called client-side validation, while validation done on the server is called server-side validation.</p>
+        <h3>Client Side Validation</h3>
+        <ul>
+            <li>This field is required" (You can't leave this field blank).</li>
+            <li> "Please enter your phone number in the format xxx-xxxx" (A specific data format is required for it to be considered valid).</li>
+            <li>"Please enter a valid email address" (the data you entered is not in the right format).</li>
+            <li> "Your password needs to be between 8 and 30 characters long and contain one uppercase letter, one symbol, and a number." (A very specific data format is required for your data).
+            </li>
+        </ul>
+        <p><strong>Never trust data passed to your server from the client. Even if your form is validating correctly and preventing malformed input on the client-side, a malicious user can still alter the network request.</strong></p>
+        <p>Two different types of client-side validation</p>
+        <ul>
+       <li> Built-in form validation uses HTML5 form validation features</li>
+       <li> JavaScript: This validation is completely customizable, but you need to create it all (or use a library).</li>
+       </ul>
+       <h2>Built-in form validation uses HTML5 form validation features</h2>
+       <h3> Required </h3> 
+      <p> Note: For good user experience, indicate to the user when form fields are required. It isn't only good user experience, it is required by WCAG accessibility guidelines.</p>
+      <p>To make an input mandatory, add this attribute to the element. When this attribute is set, the element matches the :required UI pseudo-class and the form won't submit, displaying an error message on submission when the input is empty. While empty, the input will also be considered invalid, matching the :invalid UI pseudo-class.</p>
+      <h3> Pattern</h3> 
+      <p>Another useful validation feature is the pattern attribute, which expects a Regular Expression as its value.</p>
+      <h3>Min and Max Length </h3>
+      <p> A field is invalid if it has a value and that value has fewer characters than the minlength value or more than the maxlength value.</p>
+     <h2> JavaScript Form Validation</h2>
+    <p> Constraint Validation API</p>
+    <ul>
+        <li>HTMLButtonElement (represents a <code>&lt;button&gt;</code> element)</li>
+         <li>   HTMLFieldSetElement (represents a <code>&ltfieldset&gt</code> element)</li>
+           <li> HTMLInputElement (represents an <code>&lt;input&gt;</code> element)</li>
+           <li> HTMLOutputElement (represents an <code>&lt;output&gt;</code> element)</li>
+           <li> HTMLSelectElement (represents a <code>&lt;select&gt;</code> element)</li>
+           <li> HTMLTextAreaElement (represents a<code> &lt;textarea&gt;</code> element)</li>
+    </ul>
+    
+    </article>
+
+
+
+
+
+
+
+
+    </article>
 </main>
 
 
