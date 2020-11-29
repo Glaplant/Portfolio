@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/node_modules/normalize.css">
+    <link rel="stylesheet" href="../css/styles.css">
+   
+    <title>Portfolio|Week 11 | Local Quakes</title>
+</head>
+<body>
+   <header class="header_bg">
+        <h1 class="main_links header_bg header_links"><a href= ../../index.html>Portfolio WDD330 | <a href=wk011.html>Week 11</a> | Authentication with JWT </h1>
+   
+</header> 
+<script type="module" src="wk11/client/week11.js"></script>
+<script type="module" src="wk11/client/auth.js"></script>
+
+<!-- You will need a two inputs:
+     one for the email (username)
+     and one for password. 
+     Don't forget to add a submit button as well. -->
+     <form id="login" onsubmit="return false">
+     <label for = "username">Email: </label>
+     <input id="username" placeholder="user@email.com"  type="email">
+     <label for="password" >Password: </label>
+     <input id="password"  placeholder="Password"  type="password">
+     <button id="button">Submit</button>
+     </form>
+
+     <div id="posts">
+          <ul></ul>
+     </div>
+
+     <form id="comments" class="">
+          <label for="title">New Title:</label>
+          <input id="title" type="text">
+          <label for="content">New Comment:</label>
+          <input id="content" type="text">
+          <button id="addComment">Add Comment</button>
+     </form>
+
+
+     </body>
+</html>
