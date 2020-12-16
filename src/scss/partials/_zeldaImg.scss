@@ -1,0 +1,97 @@
+
+
+#characters,#items,#places,#bosses,#dungeons,#monsters{
+    background-position:center center ;
+    background-size: 30px;
+    background-repeat: no-repeat;
+}
+
+
+#characters{
+    background-image:url("../images/linkA.png");
+}
+#items{
+    background-image:url("../images/bomb.png");
+}
+#places{
+    background-image:url("../images/bush.png");
+}
+#monsters{
+    background-image:url("../images/moblin.png");
+ }
+#bosses{
+    background-image:url("../images/dodongo.png");
+}
+#dungeons{
+    background-image:url("../images/block.png");
+}
+
+
+#characters:hover,
+#monsters:hover,
+#dungeons:hover,
+#bosses:hover,
+#items:hover,
+#places:hover{
+    display:block;
+    // background-position: 10% center;
+    
+}
+
+#characters:hover{
+    background-image:url("../images/Link2.png");
+
+}
+#monsters:hover{
+    background-image:url("../images/moblin2.png");
+
+}
+#dungeons:hover{
+    background-image:url("../images/steps.png");
+
+}
+#bosses:hover{
+    background-image:url("../images/dodongo2.png");
+
+}
+#items:hover{
+    background-image:url("../images/smoke.png");
+
+}
+#places:hover{
+    background-image:url("../images/fire.png");
+}
+
+//Mobile Menu//
+
+@media screen and (max-width: 37.5rem){
+
+    .slide{
+        display:none;
+    }
+
+    #hero_mobile{
+        display:inherit;
+        width:100vw;
+        display:block;
+        margin:0;
+    
+         
+       }
+      
+      .bg_img{
+        background-image: url("../images/brick.png");
+        background-position: center center;
+      
+
+    }
+
+      #characters,#items,#places,#bosses,#monsters,#dungeons{
+       // background-image:url("../images/linkA.png");
+        background-position:10% center ;
+        background-size: 30px;
+        background-repeat: no-repeat;
+    
+    }
+    
+}

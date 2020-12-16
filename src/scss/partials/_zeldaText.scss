@@ -1,0 +1,85 @@
+@use "_fonts";
+@use "_colors";
+
+
+//Description h1
+
+h1#description{
+    color:colors.$lightGray;
+    font-family:fonts.$roboto;
+    font-size:1.3rem;
+    font-weight: 900;
+    padding:1rem;
+    margin-left:auto;
+    margin-right:auto;
+    max-width:80%;
+    line-height: 1.8rem;
+}
+
+
+.divider{
+    width:100%;
+    margin-bottom:8rem;
+}
+
+
+
+.line{
+
+border-top: 5px solid  colors.$black;
+width:100%;
+border-radius: 30px 30px 0px 0px;
+}
+
+.lineItem,.line{
+    display:block;
+    
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
+.lineItem{
+    margin-top: -1.7rem;
+    padding: 0 1.2rem;
+    background-color: whitesmoke;
+}
+
+
+.gamesHeader{
+
+
+    font-family:fonts.$roboto ;
+    color:colors.$black;
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: .5rem;
+}
+
+.infoHeader{
+
+
+    font-family:fonts.$roboto ;
+    color:colors.$black;
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    margin:0;
+    letter-spacing: .5rem;
+}
+
+.fas.fa-caret-right,.fas.fa-caret-left{
+    font-size: 3rem;
+    color:colors.$sw_yellow;
+    
+}
+
+
+.fas.fa-caret-right:hover,.fas.fa-caret-left:hover{
+    
+    color:colors.$zelda_yellow;
+   
+    
+}
+

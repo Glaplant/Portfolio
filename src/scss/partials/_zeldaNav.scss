@@ -1,0 +1,269 @@
+@use "_colors";
+@use "_fonts";
+@use "_zeldaImg";
+@use "_zeldaCarousel";
+
+
+.container{
+    border:5px solid  #0d65bd;
+    border-radius:10px ;
+    margin:1rem;
+}
+
+.zero{
+    width: 100%;
+    height:100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+.main_zelda{
+    display:flex;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: whitesmoke;
+    padding:2rem;
+    margin-bottom: 0;
+    justify-content: space-around;
+    align-content: space-evenly;
+    width:100vw;
+    flex-direction: column;
+   
+    
+
+    
+}
+
+.main_container{display:flex;
+}
+
+// #summary.container{
+//     width:100%;
+//     margin-top:5rem;
+// }
+
+
+
+
+
+#characters::after{
+    content:"Characters";
+}
+#monsters::after{
+    content:"Monsters";
+}
+#places::after{
+    content:"Places";
+}
+#bosses::after{
+    content:"Bosses";
+}
+#dungeons::after{
+    content:"Dungeons";
+}
+#items::after{
+    content:"Items";
+}
+    
+
+.navButton{
+    border-color: colors.$bodyBG;
+    background-color: colors.$bodyBG;
+    padding:1rem;
+    border-bottom:solid 2px #000000;
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+    
+}
+
+
+
+
+#image,#stats,#summary{
+   
+    width:20rem;
+    height:20rem;
+}
+
+.infoFlex{
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    margin-bottom:3rem;
+}
+
+.pages>ul{
+    display:flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: center;
+    margin-bottom:3rem;
+}
+
+.pageNum{
+    padding:.5rem;
+    font-family: fonts.$roboto;
+    font-size:1.3rem;
+    font-weight: 600;
+    color:colors.$white;
+    background-color:colors.$bodyBG;
+    border:1px solid colors.$boxShadow;
+    width:1.3rem;
+    height:1.3rem;
+    text-align: center;
+}
+
+.pageNum:hover{
+color:colors.$bodyBG;
+background-color: colors.$white;
+}
+
+
+
+
+@media screen and (min-width: 37.5rem){
+
+    
+#characters::after,
+#monsters::after,
+#items::after,
+#bosses::after,
+#dungeons::after,
+#places::after
+{
+    opacity:0;
+    color:colors.$black;
+    font-family: fonts.$nunito;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-left:-3rem;
+
+}
+
+#characters:hover::after,
+#monsters:hover::after,
+#places:hover::after,
+#bosses:hover::after,
+#dungeons:hover::after,
+#items:hover::after
+{
+    opacity:1;
+    margin:3rem;
+    
+    
+
+}
+
+.zelda_sideNav{
+    align-items: center;
+    /* position: fixed; */
+    /* left: 0; */
+    /* top: 30%; */
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-evenly;
+    padding-bottom:3rem;
+    
+}
+
+
+.zelda_mainNav{
+    display:flex;
+    flex-wrap: wrap;
+    margin-top:3rem;
+
+
+}
+
+.menuItems{
+    padding: .5rem 0 ;
+}
+
+#gameList{
+   
+    color: #ffffff;
+    background-color: #5F1C1C;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: auto;
+    margin-right: auto;
+    list-style: none;
+}
+
+
+.start_button{
+    display:none;
+}
+
+.main_zelda{
+    margin-left:auto;
+    margin-right:auto;
+    max-width:75%;
+}
+
+
+}
+
+
+@media screen and (max-width: 37.5rem){
+    .zelda_sideNav{
+        text-align: center;
+              }
+
+    .navButton{
+        border: solid 2px colors.$dark_green;
+        background-color: colors.$bodyBG;
+        margin:0;
+        border-radius:0;
+        color:colors.$white;
+        font-family: fonts.$nunito;
+        font-size: 1.2rem;
+        font-weight: 400;
+        padding: 1rem;
+        line-height: 10px;
+        height: 10px;
+       
+    }
+
+
+  .main_zelda{
+      position:relative;
+
+  }
+
+    .menu_li{
+        display:flex;
+        flex-direction: column;
+        margin:0;
+
+        position:relative;
+        
+    }
+
+ 
+
+      .start_button{
+         display:block;
+          background-color: gray;
+          font-size: 1.2rem;
+          font-family:fonts.$roboto ;
+          font-weight: 700;
+          padding:1rem;
+          text-align:center;
+          
+
+      }
+
+
+
+    }
+
+
+
+
+
+

@@ -1,0 +1,141 @@
+
+@use "_colors";
+
+@media screen and (min-width:37.6rem){
+    
+  .zeldaHeader{
+    background-image: url("../images/brick.png");
+    padding:5rem;
+    
+  }
+    
+    
+    .carousel_wrapper{
+      
+        margin-left: auto;
+        margin-right: auto;
+        overflow:hidden;
+        
+        
+        
+        
+      
+}
+
+.carousel_wrapper *{
+    box-sizing: border-box;
+}
+
+.carousel{
+    display:flex;
+    
+    transform-style:preserve-3d;
+    background-color:colors.$black;
+  
+    
+
+}
+
+
+
+
+
+.slide{
+    opacity:0;
+    position:absolute;
+    top:0;
+    margin:auto;
+    padding: 1rem 4rem;
+    z-index:100;
+    transition:transform .5s, opacity .5s, z-index .5s;
+    max-width:100%;
+}
+
+.slide.initial,
+.slide.active{
+    opacity:1;
+    position:relative;
+    z-index:900;
+
+}
+
+
+.slide.prev, .slide.next{
+z-index:800;
+}
+
+
+
+.slide.prev{
+transform: translateX(-100%);
+}
+
+
+
+.slide.next{
+transform: translateX(100%);
+}
+
+
+.prev_button,
+.next_button {
+  position: absolute;
+  top:50%;
+  width: 3rem;
+  height: 3rem;
+  background-color: #FFF;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  cursor: pointer; 
+  z-index: 1001; /* Sit on top of everything */
+  border: 1px solid black;
+}
+.prev_button {
+  left:0;
+  margin-left:6rem;
+}
+.next_button {
+  right:0;
+  margin-right:6rem;
+}
+
+
+
+.prev_button::after,
+.next_button::after {
+  content: " ";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 54%;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+
+
+
+.next_button::after {
+  left: 47%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  margin-left:-10%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

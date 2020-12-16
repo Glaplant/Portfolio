@@ -6,6 +6,9 @@
 @use "partials/_sidebar";
 @use "partials/_notes";
 @use "partials/_main_flex";
+@use "partials/_zeldaNav";
+@use "partials/_zeldaText";
+@use "partials/_zeldaGrid";
 @import "scss/fontawesome.scss";
 @import "scss/solid.scss";
 @import "scss/brands.scss";
@@ -599,7 +602,7 @@ li.addedTask{
 
 .bgImg{
     
-    background-image: url(../images/battle.jpg);
+    background-image: url("../images/battle.jpg");
     background-repeat: no-repeat;
     background-size: cover ;
     background-position: center center;
@@ -676,3 +679,5 @@ li.addedTask{
     letter-spacing: .1rem;
     color: #ffc600;
   }
+
+

@@ -1,0 +1,38 @@
+@use "_colors";
+@use"_fonts";
+@use "_zeldaText";
+
+
+
+.gridContainer{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:2rem ;
+}
+
+.descripContainer{
+    margin-bottom: 8rem;
+    margin-top: 8rem;
+}
+
+.gridContainer{
+    margin-bottom:5rem;
+}
+
+.gridContainer>div{
+    border:3px solid colors.$black;
+    padding:1.2rem;
+    font-family: fonts.$nunito;
+    background-color: colors.$white;
+}
+
+.gridContainer>div>h2{
+    font-weight: 600;
+}
+
+
+.zeldaFoot{
+    background-color:colors.$bodyBG;
+    // padding:3rem;
+    height:5rem;
+}
