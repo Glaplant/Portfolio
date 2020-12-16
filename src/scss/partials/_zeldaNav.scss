@@ -38,10 +38,10 @@
 .main_container{display:flex;
 }
 
-// #summary.container{
-//     width:100%;
-//     margin-top:5rem;
-// }
+.hideZelda{
+    display:initial;
+}
+
 
 
 
@@ -101,6 +101,7 @@
     list-style-type: none;
     justify-content: center;
     margin-bottom:3rem;
+    padding:0;
 }
 
 .pageNum{
@@ -121,6 +122,18 @@ color:colors.$bodyBG;
 background-color: colors.$white;
 }
 
+
+#gameList{
+   
+    color: #ffffff;
+    background-color: #5F1C1C;
+    padding: 1rem;
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    margin-left: auto;
+    margin-right: auto;
+    list-style: none;
+}
 
 
 
@@ -187,8 +200,8 @@ background-color: colors.$white;
     color: #ffffff;
     background-color: #5F1C1C;
     padding: 1rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr 1fr; */
     margin-left: auto;
     margin-right: auto;
     list-style: none;
@@ -210,7 +223,22 @@ background-color: colors.$white;
 
 
 @media screen and (max-width: 37.5rem){
+
+  
+
+
+
     .zelda_sideNav{
+        // display: flex;
+        // flex-direction: column;
+        // text-align: center;
+        // position: absolute;
+        // top: 16.2rem;
+        // justify-content: center;
+        // align-content: center;
+        // width:100%;
+        // left:0;
+        // bottom:0;
         text-align: center;
               }
 
@@ -226,12 +254,22 @@ background-color: colors.$white;
         padding: 1rem;
         line-height: 10px;
         height: 10px;
+        width:auto;
        
     }
+
+.zelda_mainNav{
+margin-bottom:2rem;
+text-align: center;
+}
+
 
 
   .main_zelda{
       position:relative;
+      width: auto;
+      margin-bottom:2rem;
+    
 
   }
 
@@ -259,8 +297,21 @@ background-color: colors.$white;
       }
 
 
+      .hideZelda{
+        display:none;
+    }
+
+.navContainer{
+    position: fixed;
+    bottom: 0;
+    /* max-width: 100%; */
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
 
     }
+}
 
 
 

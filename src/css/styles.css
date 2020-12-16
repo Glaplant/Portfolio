@@ -360,6 +360,10 @@ div.notes > h2 {
   display: flex;
 }
 
+.hideZelda {
+  display: initial;
+}
+
 #characters::after {
   content: "Characters";
 }
@@ -413,6 +417,7 @@ div.notes > h2 {
   list-style-type: none;
   justify-content: center;
   margin-bottom: 3rem;
+  padding: 0;
 }
 
 .pageNum {
@@ -431,6 +436,17 @@ div.notes > h2 {
 .pageNum:hover {
   color: #5F1C1C;
   background-color: #ffffff;
+}
+
+#gameList {
+  color: #ffffff;
+  background-color: #5F1C1C;
+  padding: 1rem;
+  /* display: grid; */
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  margin-left: auto;
+  margin-right: auto;
+  list-style: none;
 }
 
 @media screen and (min-width: 37.5rem) {
@@ -483,8 +499,8 @@ div.notes > h2 {
     color: #ffffff;
     background-color: #5F1C1C;
     padding: 1rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr 1fr; */
     margin-left: auto;
     margin-right: auto;
     list-style: none;
@@ -517,10 +533,18 @@ div.notes > h2 {
     padding: 1rem;
     line-height: 10px;
     height: 10px;
+    width: auto;
+  }
+
+  .zelda_mainNav {
+    margin-bottom: 2rem;
+    text-align: center;
   }
 
   .main_zelda {
     position: relative;
+    width: auto;
+    margin-bottom: 2rem;
   }
 
   .menu_li {
@@ -538,6 +562,20 @@ div.notes > h2 {
     font-weight: 700;
     padding: 1rem;
     text-align: center;
+  }
+
+  .hideZelda {
+    display: none;
+  }
+
+  .navContainer {
+    position: fixed;
+    bottom: 0;
+    /* max-width: 100%; */
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
   }
 }
 h1#description {
@@ -631,9 +669,24 @@ h1#description {
 
 .zeldaFoot {
   background-color: #5F1C1C;
-  height: 5rem;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  padding: 1rem;
 }
 
+.zeldaFoot a:hover {
+  color: #354536;
+}
+
+@media screen and (max-width: 37.5rem) {
+  .main_Zelda {
+    max-width: 100%;
+  }
+
+  .gridContainer {
+    grid-template-columns: 1fr;
+  }
+}
 /*!
  * Font Awesome Free 5.14.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
